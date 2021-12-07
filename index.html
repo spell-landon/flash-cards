@@ -29,7 +29,13 @@
   </head>
   <body>
     <header>
-      <p class="hero-title">Flash Card Memory Game</p>
+      <p class="hero-title">Flash Card</p>
+      <!-- Referenced: https://www.w3schools.com/howto/howto_css_switch.asp -->
+      <div class="switch">
+        <input type="checkbox" name="" id="toggle" />
+        <span class="slider round"></span>
+      </div>
+
       <div class="score-section hidden">
         <p class="score-board-title">Score</p>
         <p class="score-board-count">0/10</p>
@@ -49,10 +55,6 @@
         <button class="start-game-btn">Start Game</button>
       </section>
 
-      <!-- <section class="game-board hidden">
-        <h2 class="card-counter"></h2>
-      </section> -->
-
       <section class="game-board hidden">
         <!-- CARD COUNTER -->
         <h2 class="card-counter"></h2>
@@ -60,7 +62,7 @@
         <section class="card-and-buttons">
           <button id="arrowBtn"><i class="fas fa-arrow-left"></i></button>
           <div class="card">
-              <p id="card-text"></p>
+            <p id="card-text"></p>
           </div>
           <button id="arrowBtn"><i class="fas fa-arrow-right"></i></button>
         </section>
@@ -73,21 +75,26 @@
           </div>
           <!-- QUESTION #2 -->
           <div class="answerTwo">
-            <input type="radio" name="answer" id="answer1" />
-            <label for="answer1">Answer 1</label>
+            <input type="radio" name="answer" id="answer2" />
+            <label for="answer2">Answer 2</label>
           </div>
           <!-- QUESTION #3 -->
-          <div class="answerOne">
-            <input type="radio" name="answer" id="answer1" />
-            <label for="answer1">Answer 1</label>
+          <div class="answerThree">
+            <input type="radio" name="answer" id="answer3" />
+            <label for="answer3">Answer 3</label>
           </div>
           <!-- QUESTION #4 -->
-          <div class="answerTwo">
-            <input type="radio" name="answer" id="answer1" />
-            <label for="answer1">Answer 1</label>
+          <div class="answerFour">
+            <input type="radio" name="answer" id="answer4" />
+            <label for="answer4">Answer 4</label>
           </div>
-          <button type="submit">Check Your Answer</button>
+          <button type="submit" class="check-answer">Check Your Answer</button>
         </form>
+        <button class="restart">Restart</button>
+        <p class="hint">
+          <i class="fas fa-question"></i>You can take a peek at the answer by
+          clicking on the question mark in the lower left hand corner
+        </p>
       </section>
     </main>
 
