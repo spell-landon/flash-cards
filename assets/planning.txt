@@ -1,0 +1,49 @@
+Pseudocode for Flash Cards
+
+REFERENCE scoreBoard, cardCounter, prevBtn, nextBtn, restartBtn, startGameBtn, radio buttons
+
+ATTACH event listener to startGameBtn
+ATTACH event listener to restartBtn
+ATTACH event listener to prevBtn
+ATTACH event listener to nextBtn
+
+What will happen when the startGameBtn is clicked?
+- Remove the current page
+- Add the card element to the page
+    - Load the first question onto the card
+    - Populate the answer options
+    - Set the scoreBoard to '0'
+    - Set the cardCounter to '1'
+- Check if you go the question correct
+    - IF correct
+        - Populate a "Good job" message on the page
+        - Highlight each option with correct/incorrect answers by text color
+        - Change the background color to winning color
+        - Add a "Next" question button to the page
+        - Update the scoreBoard
+        - Update the cardCounter
+        - Move to next question after set amount of time
+    - IF incorrect
+        - Populate a "Better luck next time" message on the page
+        - Highlight each option with correct/incorrect answers by text color
+        - Change the background color to losing color
+        - Add a "Next" question button to the page
+        - Update the scoreBoard
+        - Update the cardCounter
+        - Move to next question after set amount of time
+- IF all questions have been answered
+    - IF all answers were correct
+        - Update scoreBoard
+        - Change the background color to winning color
+        - Remove the card/option elements
+        - Display a winning message
+    - IF even 1 answer was incorrect
+        - Update scoreBoard
+        - Change the background color to losing color
+        - Remove the card/option elements
+        - Display a losing message
+- RESET the game by "Restart button"
+    - Set scoreBoard to "0"
+    - Set cardCounter to "1"
+    - Set background color to initial color
+    - Set text color to initial color
