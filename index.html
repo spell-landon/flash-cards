@@ -4,11 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/office/80/000000/brain.png"
+      type="image/x-icon"
+    />
     <title>Flash Cards</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <header>
+      <p class="hero-title">Flash Card Memory Game</p>
+      <div class="score-section hidden">
+        <p class="score-board-title">Score</p>
+        <p class="score-board-count">0/10</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="game-start-page">
+        <h1>Welcome to the Flash Card Memory Game</h1>
+        <p>
+          The rules are simple, you test your own memory with the flash cards. A
+          card will appear and you have a selection of options to choose from.
+          If your selection is correct, you will move on to the next card! If
+          your selection is incorrect, you will not receive a point, but you
+          will have the option to come back and try again later!
+        </p>
+        <button class="start-game-btn">Start Game</button>
+      </section>
+
+      <!-- <article class="card-counter-section">
+        <p>1/10</p>
+      </article> -->
+    </main>
 
     <script src="./script.js"></script>
   </body>
