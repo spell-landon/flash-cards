@@ -29,18 +29,20 @@
   </head>
   <body>
     <header>
-      <p class="hero-title">Flash Card</p>
-      <!-- Referenced: https://www.w3schools.com/howto/howto_css_switch.asp -->
-      <div class="switch">
-        <input type="checkbox" name="" id="toggle" />
-        <span class="slider round"></span>
-      </div>
-
+      <p class="hero-title">Flash Card Memory Game</p>
       <div class="score-section hidden">
         <p class="score-board-title">Score</p>
         <p class="score-board-count">0/10</p>
       </div>
     </header>
+
+    <!-- Referenced: https://www.w3schools.com/howto/howto_css_switch.asp -->
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" name="toggle-switch" id="toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
 
     <main>
       <section class="game-start-page">

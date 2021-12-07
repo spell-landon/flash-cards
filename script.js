@@ -34,12 +34,14 @@ const formEl = document.querySelector('form');
 const cardTextEl = document.querySelector('#card-text');
 const nextArrow = document.querySelector('.fa-arrow-right');
 const prevArrow = document.querySelector('.fa-arrow-left');
+const toggleTheme = document.querySelector('#toggle');
 
 /*----- event listeners -----*/
 startBtn.addEventListener('click', startGame);
 formEl.addEventListener('submit', checkAnswer);
 nextArrow.addEventListener('click', nextQuestion);
 prevArrow.addEventListener('click', previousQuestion);
+toggleTheme.addEventListener('click', changeTheme);
 
 /*----- functions -----*/
 function startGame() {
@@ -72,4 +74,7 @@ function previousQuestion() {
     cardTextEl.innerText = QUESTIONS[i];
     cardCounter.innerText = `${i + 1}/10`;
   }
+}
+function changeTheme() {
+  document.body.style.backgroundColor = 'gray';
 }
