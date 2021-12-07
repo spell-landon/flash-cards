@@ -75,7 +75,7 @@ main {
   background-color: rgb(172, 229, 180);
 }
 /*? START GAME PAGE ----- END */
-/*? GAME BOARD PAGE */
+/*? DEFAULT GAME BOARD PAGE */
 .game-board {
   height: 100vh;
   width: 100vw;
@@ -84,6 +84,12 @@ main {
   justify-content: center;
   align-items: center;
 }
+.card-and-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* CARD */
 .card {
   height: 350px;
   width: 550px;
@@ -109,6 +115,8 @@ main {
   font-weight: 300;
   line-height: 50px;
 }
+/* CARD ----- END */
+/* ARROW BUTTONS */
 #arrowBtn {
   font-size: 24px;
   height: 1rem;
@@ -125,8 +133,15 @@ i {
   background-color: white;
   padding: 1rem;
 }
-.card-and-buttons {
+/* ARROW BUTTONS ----- END */
+/* FORM */
+form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  max-width: 650px;
+  font-size: 20px;
+  text-align: left;
+}
+#question-1 > div {
+  padding: 1rem 0;
 }

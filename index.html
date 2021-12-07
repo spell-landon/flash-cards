@@ -49,8 +49,45 @@
         <button class="start-game-btn">Start Game</button>
       </section>
 
-      <section class="game-board hidden">
+      <!-- <section class="game-board hidden">
         <h2 class="card-counter"></h2>
+      </section> -->
+
+      <section class="game-board hidden">
+        <!-- CARD COUNTER -->
+        <h2 class="card-counter"></h2>
+        <!-- CARD and ARROW BUTTONS -->
+        <section class="card-and-buttons">
+          <button id="arrowBtn"><i class="fas fa-arrow-left"></i></button>
+          <div class="card">
+              <p id="card-text"></p>
+          </div>
+          <button id="arrowBtn"><i class="fas fa-arrow-right"></i></button>
+        </section>
+        <!-- FORM FOR ANSWERS -->
+        <form id="question-1">
+          <!-- QUESTION #1 -->
+          <div class="answerOne">
+            <input type="radio" name="answer" id="answer1" />
+            <label for="answer1">Answer 1</label>
+          </div>
+          <!-- QUESTION #2 -->
+          <div class="answerTwo">
+            <input type="radio" name="answer" id="answer1" />
+            <label for="answer1">Answer 1</label>
+          </div>
+          <!-- QUESTION #3 -->
+          <div class="answerOne">
+            <input type="radio" name="answer" id="answer1" />
+            <label for="answer1">Answer 1</label>
+          </div>
+          <!-- QUESTION #4 -->
+          <div class="answerTwo">
+            <input type="radio" name="answer" id="answer1" />
+            <label for="answer1">Answer 1</label>
+          </div>
+          <button type="submit">Check Your Answer</button>
+        </form>
       </section>
     </main>
 
