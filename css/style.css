@@ -12,6 +12,7 @@ body {
   background-color: white;
 }
 .hidden {
+  /* display: none; */
   visibility: hidden;
 }
 /*? HEADER SECTION */
@@ -314,10 +315,10 @@ form {
   transition: 0.4s;
 }
 #toggle:checked + .slider {
-  background-color: #2196f3;
+  background-color: #39385A;
 }
 #toggle:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #39385A;
 }
 #toggle:checked + .slider:before {
   -webkit-transform: translateX(26px);
@@ -340,3 +341,60 @@ form {
   text-align: center;
 }
 /* MESSAGE IN FORM ----- END */
+
+.display-none {
+  display: none;
+  visibility: hidden;
+}
+/* WINNING PAGE */
+.winning-page {
+  position: absolute;
+  height: 100vh;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #bce8c1;
+}
+.winning-page > h1 {
+  font-size: 36px;
+  padding: 1rem;
+}
+.winning-page > h2 {
+  font-size: 30px;
+  padding: 1rem;
+  font-weight: 300;
+}
+.winning-page > p {
+  font-size: 18px;
+  padding: 0.5rem;
+}
+/* WINNING PAGE ----- END */
+/* LOSING PAGE */
+.losing-page {
+  position: absolute;
+  height: 100vh;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f1bcbc;
+}
+.losing-page > h1 {
+  font-size: 36px;
+  padding: 1rem;
+}
+.losing-page > h2 {
+  font-size: 30px;
+  padding: 1rem;
+  font-weight: 300;
+}
+.losing-page > p {
+  font-size: 18px;
+  padding: 0.5rem;
+}
+/* LOSING PAGE ----- END */

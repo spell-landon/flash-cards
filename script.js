@@ -107,6 +107,9 @@ const answerLabelFour = document.querySelector('#answer-4-label');
 const radioButtons = document.getElementsByName('answer');
 // Check answer button
 const checkAnswerBtn = document.querySelector('.check-answer');
+// ending pages
+const endWinningPage = document.querySelector('.winning-page');
+const endLosingPage = document.querySelector('.losing-page');
 
 /*----- event listeners -----*/
 startBtn.addEventListener('click', startGame);
@@ -130,6 +133,9 @@ function init() {
   startPageEl.classList.remove('hidden');
   // set the question text to the first question
   cardTextQuestionEl.innerText = QUESTIONS[i];
+  // hide the win/lose pages
+  endWinningPage.classList.add('hidden');
+  endLosingPage.classList.add('hidden');
 }
 init();
 
@@ -158,6 +164,16 @@ function startGame() {
   answerThreeEl.value = questionOptions.answer3[i];
   answerFourEl.value = questionOptions.answer4[i];
 }
+function winningPage() {
+  gameBoardSection.classList.add('hidden');
+  gameBoardSection.classList.add('display-none');
+  endWinningPage.classList.remove('display-none');
+}
+function losingPage() {
+  gameBoardSection.classList.add('hidden');
+  gameBoardSection.classList.add('display-none');
+  endLosingPage.classList.remove('display-none');
+}
 
 function checkAnswer(event) {
   event.preventDefault();
@@ -173,9 +189,18 @@ function checkAnswer(event) {
   } else {
     incorrectAnswer();
   }
+  //! FIGURE OUT THE WINNING/LOSING LOGIC
+  // // check to see if the score is "10/10"
+  // if (scoreCount.innerText === `10/10` && QUESTIONS.length - 1 === 10) {
+  //   // if it is, then display the winning page
+  //   winningPage();
+  // } else {
+  //   // if it's not, then display the losing page
+  //   losingPage();
+  // }
 }
 function nextQuestion() {
-  if (i < 9) {
+  if (i < QUESTIONS.length - 1) {
     // reset the page styling
     defaultStyle();
     // move to the next iteration
@@ -265,6 +290,10 @@ function losingMessage() {
 }
 
 function defaultStyle() {
+  // remove radio button selection
+  for (let i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].checked = false;
+  }
   // check answer button color
   checkAnswerBtn.style.backgroundColor = '#bce8c1';
   // enable the check answer button
@@ -299,9 +328,7 @@ function incorrectAnswer() {
 
 function changeTheme(cssFile, cssLinkIndex) {
   // https://stackoverflow.com/questions/19844545/replacing-css-file-on-the-fly-and-apply-the-new-style-to-the-page
-  
-  //? CREATE NEW CSS FOR DARK THEME
-
+  // TYLER also helped out on this portion as well.
   isDarkTheme = !isDarkTheme;
   if (isDarkTheme) {
     // default link
