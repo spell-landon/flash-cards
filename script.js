@@ -35,6 +35,7 @@ const cardTextEl = document.querySelector('#card-text');
 const nextArrow = document.querySelector('.fa-arrow-right');
 const prevArrow = document.querySelector('.fa-arrow-left');
 const toggleTheme = document.querySelector('#toggle');
+const restartBtn = document.querySelector('.restart');
 
 /*----- event listeners -----*/
 startBtn.addEventListener('click', startGame);
@@ -42,8 +43,17 @@ formEl.addEventListener('submit', checkAnswer);
 nextArrow.addEventListener('click', nextQuestion);
 prevArrow.addEventListener('click', previousQuestion);
 toggleTheme.addEventListener('click', changeTheme);
+restartBtn.addEventListener('click', init);
 
 /*----- functions -----*/
+function init() {
+  i = 0;
+  scoreSection.classList.add('hidden');
+  gameBoardSection.classList.add('hidden');
+  startPageEl.classList.remove('hidden');
+  cardTextEl.innerText = QUESTIONS[i];
+}
+init();
 function startGame() {
   // Hide the Start Page Section
   startPageEl.classList.add('hidden');
