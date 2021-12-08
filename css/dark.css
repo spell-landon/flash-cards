@@ -9,7 +9,7 @@ body {
   height: 100vh;
   max-width: 1500px;
   margin: 0 auto;
-  background-color: white;
+  background: linear-gradient(180deg, #5C5B70 0%, #39385A 100%);
 }
 .hidden {
   visibility: hidden;
