@@ -31,11 +31,15 @@ const scoreSection = document.querySelector('.score-section');
 const gameBoardSection = document.querySelector('.game-board');
 const cardCounter = document.querySelector('.card-counter');
 const formEl = document.querySelector('form');
-const cardTextEl = document.querySelector('#card-text');
+const cardTextQuestionEl = document.querySelector('#card-text-question');
+const cardTextAnswerEl = document.querySelector('#card-text-answer');
 const nextArrow = document.querySelector('.fa-arrow-right');
 const prevArrow = document.querySelector('.fa-arrow-left');
 const toggleTheme = document.querySelector('#toggle');
 const restartBtn = document.querySelector('.restart');
+const hintBtn = document.querySelector('.hint-button');
+const flipCardInner = document.querySelector('.flip-card-inner');
+const hideHintBtn = document.querySelector('.hide-hint-button');
 
 /*----- event listeners -----*/
 startBtn.addEventListener('click', startGame);
@@ -44,6 +48,8 @@ nextArrow.addEventListener('click', nextQuestion);
 prevArrow.addEventListener('click', previousQuestion);
 toggleTheme.addEventListener('click', changeTheme);
 restartBtn.addEventListener('click', init);
+hintBtn.addEventListener('click', showHint);
+hideHintBtn.addEventListener('click', hideHint);
 
 /*----- functions -----*/
 function init() {
@@ -51,7 +57,7 @@ function init() {
   scoreSection.classList.add('hidden');
   gameBoardSection.classList.add('hidden');
   startPageEl.classList.remove('hidden');
-  cardTextEl.innerText = QUESTIONS[i];
+  cardTextQuestionEl.innerText = QUESTIONS[i];
 }
 init();
 function startGame() {
@@ -61,8 +67,10 @@ function startGame() {
   scoreSection.classList.remove('hidden');
   // Show the gameplay section
   gameBoardSection.classList.remove('hidden');
-  // Set card innerText to first question
-  cardTextEl.innerText = QUESTIONS[i];
+  // Set card question innerText to first question
+  cardTextQuestionEl.innerText = QUESTIONS[i];
+  // Set card answer innerText to first question
+  cardTextAnswerEl.innerText = ANSWERS[i];
   // Set card Counter to current card
   cardCounter.innerText = `${i + 1}/10`;
 }
@@ -74,17 +82,27 @@ function checkAnswer(event) {
 function nextQuestion() {
   if (i < 9) {
     i++;
-    cardTextEl.innerText = QUESTIONS[i];
+    cardTextQuestionEl.innerText = QUESTIONS[i];
+    cardTextAnswerEl.innerText = ANSWERS[i];
     cardCounter.innerText = `${i + 1}/10`;
+    hideHint();
   }
 }
 function previousQuestion() {
   if (i !== 0) {
     i--;
-    cardTextEl.innerText = QUESTIONS[i];
+    cardTextQuestionEl.innerText = QUESTIONS[i];
+    cardTextAnswerEl.innerText = ANSWERS[i];
     cardCounter.innerText = `${i + 1}/10`;
+    hideHint();
   }
 }
 function changeTheme() {
   document.body.style.backgroundColor = 'gray';
+}
+function showHint() {
+  flipCardInner.style.transform = 'rotateX(180deg)';
+}
+function hideHint() {
+  flipCardInner.style.transform = 'rotateX(0deg)';
 }
