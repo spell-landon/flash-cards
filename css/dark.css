@@ -69,7 +69,7 @@ main {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  opacity: 0.5;
+  opacity: 0.2;
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
 }
@@ -126,6 +126,7 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  color: white;
 }
 .card-and-buttons {
   display: -webkit-box;
@@ -192,18 +193,18 @@ main {
 }
 #card-text-question {
   font-size: 24px;
-  color: white;
+  color: black;
   width: 400px;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 50px;
 }
 #card-text-answer {
   font-size: 24px;
-  color: white;
+  color: black;
   width: 400px;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 50px;
 }
 /* HINT BUTTON */
@@ -259,6 +260,7 @@ main {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
   background-color: transparent;
+  color: white;
 }
 #arrowBtn:hover {
   color: rgb(78, 188, 59);
@@ -289,7 +291,7 @@ form {
 /* FORM ----- END */
 /* CHECK ANSWER BUTTON */
 .check-answer {
-  height: 30px;
+  height: 40px;
   width: 200px;
   background-color: #bce8c1;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -311,7 +313,7 @@ form {
 /* RESTART BUTTON */
 .restart {
   border: none;
-  height: 25px;
+  height: 35px;
   width: 100px;
   background: #f69797;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -440,8 +442,9 @@ form {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  background-color: #bce8c1;
+  background: linear-gradient(180deg, #6da587 0%, #164927 100%);
   margin-bottom: 8rem;
+  color: white;
 }
 .winning-page > h1 {
   font-size: 36px;
@@ -476,8 +479,9 @@ form {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  background-color: #f1bcbc;
+  background: linear-gradient(180deg, #d08888 0%, #491616 100%);
   margin-bottom: 8rem;
+  color: white;
 }
 .losing-page > h1 {
   font-size: 36px;

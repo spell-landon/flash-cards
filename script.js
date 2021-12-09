@@ -78,6 +78,7 @@ const questionOptions = {
 
 let i = 0;
 let score = Number();
+let theme = document.getElementById('theme');
 
 //*---------------------------------------*/
 //*------ cached element references ------*/
@@ -138,7 +139,8 @@ toggleTheme.addEventListener('click', darkTheme);
 function init() {
   // set i to 0
   i = 0;
-  scoreCount.innerText = `0/10`;
+  score = 0;
+  scoreCount.innerText = `${score}/10`;
   document.body.style.backgroundColor = 'white';
   // hide the score board section
   scoreSection.classList.add('hidden');
@@ -364,24 +366,41 @@ function defaultStyle() {
   if (formEl.contains(loseMsg)) {
     formEl.removeChild(loseMsg);
   }
+  // reset background depending on dark theme
+  if (theme.getAttribute('href') == `./css/style.css`) {
+    document.body.style.backgroundColor = 'white';
+  }
+  if (theme.getAttribute('href') == `./css/dark.css`) {
+    document.body.style.background = `linear-gradient(180deg, #5c5b70 0%, #39385a 100%)`;
+  }
 }
 
 function correctAnswer() {
   checkAnswerBtn.style.backgroundColor = 'gray';
   // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
   checkAnswerBtn.disabled = true;
-  document.body.style.backgroundColor = '#BCE8C1';
+  if (theme.getAttribute('href') == `./css/style.css`) {
+    document.body.style.backgroundColor = '#BCE8C1';
+  } else if (theme.getAttribute('href') == `./css/dark.css`) {
+    document.body.style.background = `linear-gradient(180deg, #6DA587 0%, #164927 100%)`;
+  }
   goodJobMessage();
 }
 function incorrectAnswer() {
   checkAnswerBtn.style.backgroundColor = 'gray';
   checkAnswerBtn.disabled = 'disabled';
-  document.body.style.backgroundColor = '#F1BCBC';
+
+  if (theme.getAttribute('href') == `./css/style.css`) {
+    document.body.style.backgroundColor = '#F1BCBC';
+  }
+  if (theme.getAttribute('href') == `./css/dark.css`) {
+    document.body.style.background = `linear-gradient(180deg, #D08888 0%, #491616 100%)`;
+  }
   losingMessage();
 }
 
 function darkTheme() {
-  let theme = document.getElementById('theme');
+  // HELPER: https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
   if (theme.getAttribute('href') == `./css/style.css`) {
     theme.setAttribute('href', `./css/dark.css`);
   } else {
