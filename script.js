@@ -95,7 +95,7 @@ const cardTextAnswerEl = document.querySelector('#card-text-answer');
 const nextArrow = document.querySelector('.fa-arrow-right');
 const prevArrow = document.querySelector('.fa-arrow-left');
 const toggleTheme = document.querySelector('#toggle');
-const restartBtn = document.querySelector('.restart');
+const restartBtn = document.querySelectorAll('.restart');
 const hintBtn = document.querySelector('.hint-button');
 const flipCardInner = document.querySelector('.flip-card-inner');
 const hideHintBtn = document.querySelector('.hide-hint-button');
@@ -124,7 +124,9 @@ startBtn.addEventListener('click', startGame);
 formEl.addEventListener('submit', checkAnswer);
 nextArrow.addEventListener('click', nextQuestion);
 prevArrow.addEventListener('click', previousQuestion);
-restartBtn.addEventListener('click', init);
+restartBtn.forEach((button) => {
+  button.addEventListener('click', init);
+});
 hintBtn.addEventListener('click', showHint);
 hideHintBtn.addEventListener('click', hideHint);
 toggleTheme.addEventListener('click', changeTheme);
@@ -136,7 +138,7 @@ toggleTheme.addEventListener('click', changeTheme);
 function init() {
   // set i to 0
   i = 0;
-  scoreCount.innerText = `${0}/10`;
+  scoreCount.innerText = `0/10`;
   document.body.style.backgroundColor = 'white';
   // hide the score board section
   scoreSection.classList.add('hidden');
@@ -155,7 +157,6 @@ init();
 
 //?---------- Start the game function ----------*/
 function startGame() {
-  i = 0;
   // enable the check answer button
   checkAnswerBtn.disabled = false;
   // Hide the Start Page Section
@@ -234,24 +235,21 @@ function checkAnswer(event) {
   console.log(`${QUESTIONS.length}/10`);
   //! maybe just write out each area and add/remove the classlist for the dark mode. trigger with the same switch.
   // check to see if the score is "10/10" and if we have reached the last question
-  if (
-    scoreCount.innerText == `${QUESTIONS.length}/10` &&
-    QUESTIONS.length - 1
-  ) {
+  if (scoreCount.innerText === `10/10`) {
     // if it is, then display the winning page
     winningPage();
   } else if (
-    scoreCount.innerText != `${QUESTIONS.length}/10` &&
-    QUESTIONS.length - 1
+    scoreCount.innerText !== `10/10` &&
+    cardCounter.innerText === `10/10`
   ) {
-    // losingPage();
+    losingPage();
     console.log(`You've lost`);
   }
 }
 
 //?---------- Next Question Function ----------*/
 function nextQuestion() {
-  if (i < QUESTIONS.length) {
+  if (i < QUESTIONS.length - 1) {
     // reset the page styling
     defaultStyle();
     // move to the next iteration
@@ -341,7 +339,6 @@ function losingMessage() {
 }
 
 function defaultStyle() {
-  score = 0;
   // remove radio button selection
   for (let i = 0; i < radioButtons.length; i++) {
     radioButtons[i].checked = false;
