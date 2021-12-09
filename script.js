@@ -1,4 +1,6 @@
-/*----- constants -----*/
+//*---------------------------------------*/
+//*-------------- constants --------------*/
+//*---------------------------------------*/
 const QUESTIONS = [
   'When did guitar music first become prevalent?',
   `Where did guitars first appear?`,
@@ -75,8 +77,12 @@ const questionOptions = {
 };
 
 let i = 0;
+let score = Number();
 let isDarkTheme = false;
-/*----- cached element references -----*/
+
+//*---------------------------------------*/
+//*------ cached element references ------*/
+//*---------------------------------------*/
 const startBtn = document.querySelector('.start-game-btn');
 const startPageEl = document.querySelector('.game-start-page');
 const scoreSection = document.querySelector('.score-section');
@@ -111,7 +117,9 @@ const checkAnswerBtn = document.querySelector('.check-answer');
 const endWinningPage = document.querySelector('.winning-page');
 const endLosingPage = document.querySelector('.losing-page');
 
-/*----- event listeners -----*/
+//*---------------------------------------*/
+//*----------- event listeners -----------*/
+//*---------------------------------------*/
 startBtn.addEventListener('click', startGame);
 formEl.addEventListener('submit', checkAnswer);
 nextArrow.addEventListener('click', nextQuestion);
@@ -121,10 +129,15 @@ hintBtn.addEventListener('click', showHint);
 hideHintBtn.addEventListener('click', hideHint);
 toggleTheme.addEventListener('click', changeTheme);
 
-/*----- functions -----*/
+//*---------------------------------------*/
+//*-------------- functions --------------*/
+//*---------------------------------------*/
+//?---------- Initalize the page ----------*/
 function init() {
   // set i to 0
   i = 0;
+  scoreCount.innerText = `${0}/10`;
+  document.body.style.backgroundColor = 'white';
   // hide the score board section
   scoreSection.classList.add('hidden');
   // hide the main game board section
@@ -136,10 +149,15 @@ function init() {
   // hide the win/lose pages
   endWinningPage.classList.add('hidden');
   endLosingPage.classList.add('hidden');
+  defaultStyle();
 }
 init();
 
+//?---------- Start the game function ----------*/
 function startGame() {
+  i = 0;
+  // enable the check answer button
+  checkAnswerBtn.disabled = false;
   // Hide the Start Page Section
   startPageEl.classList.add('hidden');
   // Show the Score Board
@@ -152,6 +170,9 @@ function startGame() {
   cardTextAnswerEl.innerText = ANSWERS[i];
   // Set card Counter to current card
   cardCounter.innerText = `${i + 1}/10`;
+  // hide the win/lose pages
+  endWinningPage.classList.add('hidden');
+  endLosingPage.classList.add('hidden');
 
   // Set answer options (labels)
   answerLabelOne.innerText = questionOptions.answer1[i];
@@ -164,44 +185,73 @@ function startGame() {
   answerThreeEl.value = questionOptions.answer3[i];
   answerFourEl.value = questionOptions.answer4[i];
 }
+//?---------- Winning Page Function ----------*/
 function winningPage() {
+  // hide the score board section
+  scoreSection.classList.add('hidden');
+  // hide the main game board section
   gameBoardSection.classList.add('hidden');
-  gameBoardSection.classList.add('display-none');
-  endWinningPage.classList.remove('display-none');
+  // show the start page
+  startPageEl.classList.add('hidden');
+  // hide the win/lose pages
+  endWinningPage.classList.remove('hidden');
+  endLosingPage.classList.add('hidden');
 }
+//?---------- Losing Page Function ----------*/
 function losingPage() {
+  // hide the score board section
+  scoreSection.classList.add('hidden');
+  // hide the main game board section
   gameBoardSection.classList.add('hidden');
-  gameBoardSection.classList.add('display-none');
-  endLosingPage.classList.remove('display-none');
+  // show the start page
+  startPageEl.classList.add('hidden');
+  // hide the win/lose pages
+  endWinningPage.classList.add('hidden');
+  endLosingPage.classList.remove('hidden');
 }
 
+//?---------- Check the Answer Function ----------*/
 function checkAnswer(event) {
   event.preventDefault();
   let selectedOption;
+
   for (let i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].checked) {
       selectedOption = radioButtons[i].value;
     }
   }
   if (selectedOption === ANSWERS[i]) {
-    scoreCount.innerText = `${i + 1}/10`;
+    scoreCount.innerText = `${score + 1}/10`;
     correctAnswer();
+    score = score + 1;
   } else {
     incorrectAnswer();
   }
-  //! maybe just write out each area and add/remove the classlist for the dark mode. trigger with the same switch. 
-  //! FIGURE OUT THE WINNING/LOSING LOGIC
-  // // check to see if the score is "10/10"
-  // if (scoreCount.innerText === `10/10` && QUESTIONS.length - 1 === 10) {
-  //   // if it is, then display the winning page
-  //   winningPage();
-  // } else {
-  //   // if it's not, then display the losing page
-  //   losingPage();
-  // }
+
+  console.log(parseInt(scoreCount.innerText));
+  console.log(QUESTIONS.length);
+  console.log(scoreCount.innerText);
+  console.log(`${QUESTIONS.length}/10`);
+  //! maybe just write out each area and add/remove the classlist for the dark mode. trigger with the same switch.
+  // check to see if the score is "10/10" and if we have reached the last question
+  if (
+    scoreCount.innerText == `${QUESTIONS.length}/10` &&
+    QUESTIONS.length - 1
+  ) {
+    // if it is, then display the winning page
+    winningPage();
+  } else if (
+    scoreCount.innerText != `${QUESTIONS.length}/10` &&
+    QUESTIONS.length - 1
+  ) {
+    // losingPage();
+    console.log(`You've lost`);
+  }
 }
+
+//?---------- Next Question Function ----------*/
 function nextQuestion() {
-  if (i < QUESTIONS.length - 1) {
+  if (i < QUESTIONS.length) {
     // reset the page styling
     defaultStyle();
     // move to the next iteration
@@ -228,7 +278,6 @@ function nextQuestion() {
     answerThreeEl.value = questionOptions.answer3[i];
     answerFourEl.value = questionOptions.answer4[i];
   }
-
 }
 function previousQuestion() {
   if (i !== 0) {
@@ -292,6 +341,7 @@ function losingMessage() {
 }
 
 function defaultStyle() {
+  score = 0;
   // remove radio button selection
   for (let i = 0; i < radioButtons.length; i++) {
     radioButtons[i].checked = false;

@@ -428,15 +428,15 @@ form {
 }
 /* MESSAGE IN FORM ----- END */
 
-.display-none {
+/* .display-none {
   display: none;
   visibility: hidden;
-}
+} */
 /* WINNING PAGE */
 .winning-page {
   position: absolute;
   height: 100vh;
-  z-index: -1;
+  /* z-index: -1; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,7 +471,7 @@ form {
 .losing-page {
   position: absolute;
   height: 100vh;
-  z-index: -1;
+  /* z-index: -1; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,3 +502,9 @@ form {
   padding: 0.5rem;
 }
 /* LOSING PAGE ----- END */
+
+/* RADIO BUTTON STYLE */
+.radio {
+  background-color: red;
+}
+/* RADIO BUTTON STYLE ----- END */
