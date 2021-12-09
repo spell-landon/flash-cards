@@ -54,6 +54,7 @@ main {
   height: 95%;
 }
 /*? HEADER SECTION ----- END */
+
 /*? START GAME PAGE */
 #hero-img {
   position: absolute;
@@ -103,6 +104,7 @@ main {
   background-color: rgb(172, 229, 180);
 }
 /*? START GAME PAGE ----- END */
+
 /*? DEFAULT GAME BOARD PAGE */
 .game-board {
   height: 100vh;
@@ -261,7 +263,9 @@ main {
 .flip-card-back > button:hover {
   background-color: #efd593;
 }
+/* HIDE-HINT BUTTON ----- END */
 /* CARD ----- END */
+
 /* ARROW BUTTONS */
 #arrowBtn {
   font-size: 24px;
@@ -282,6 +286,7 @@ i {
   padding: 1rem;
 }
 /* ARROW BUTTONS ----- END */
+
 /* FORM */
 form {
   display: -webkit-box;
@@ -299,6 +304,7 @@ form {
   padding: 1rem 0;
 }
 /* FORM ----- END */
+
 /* CHECK ANSWER BUTTON */
 .check-answer {
   height: 40px;
@@ -337,6 +343,8 @@ form {
 .restart:active {
   background: #f4a4a4;
 }
+/* RESTART BUTTON ----- END */
+
 /* BOTTOM HINT */
 .game-board > p {
   font-size: 12px;
@@ -348,7 +356,6 @@ form {
 
 /* SWITCH CONTAINER */
 .switch-container {
-  /* border: 1px solid red; */
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,6 +369,7 @@ form {
   justify-content: center;
 }
 /* SWITCH CONTAINER ----- END */
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -419,6 +427,7 @@ form {
 .slider.round:before {
   border-radius: 50%;
 }
+
 /* MESSAGE IN FORM */
 #good-job,
 #bad-job {
@@ -429,15 +438,10 @@ form {
 }
 /* MESSAGE IN FORM ----- END */
 
-/* .display-none {
-  display: none;
-  visibility: hidden;
-} */
 /* WINNING PAGE */
 .winning-page {
   position: absolute;
   height: 100vh;
-  /* z-index: -1; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -469,11 +473,11 @@ form {
   padding: 0.5rem;
 }
 /* WINNING PAGE ----- END */
+
 /* LOSING PAGE */
 .losing-page {
   position: absolute;
   height: 100vh;
-  /* z-index: -1; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,9 +509,3 @@ form {
   padding: 0.5rem;
 }
 /* LOSING PAGE ----- END */
-
-/* RADIO BUTTON STYLE */
-.radio {
-  background-color: red;
-}
-/* RADIO BUTTON STYLE ----- END */

@@ -139,8 +139,11 @@ toggleTheme.addEventListener('click', darkTheme);
 function init() {
   // set i to 0
   i = 0;
+  // set score to 0
   score = 0;
+  // set score innertext
   scoreCount.innerText = `${score}/10`;
+  // set the initial body background color
   document.body.style.backgroundColor = 'white';
   // hide the score board section
   scoreSection.classList.add('hidden');
@@ -158,7 +161,6 @@ function init() {
   header.classList.remove('hidden');
 }
 init();
-
 //?---------- Start the game function ----------*/
 function startGame() {
   // enable the check answer button
@@ -178,7 +180,6 @@ function startGame() {
   // hide the win/lose pages
   endWinningPage.classList.add('hidden');
   endLosingPage.classList.add('hidden');
-
   // Set answer options (labels)
   answerLabelOne.innerText = questionOptions.answer1[i];
   answerLabelTwo.innerText = questionOptions.answer2[i];
@@ -218,29 +219,30 @@ function losingPage() {
   // hide header
   header.classList.add('hidden');
 }
-
 //?---------- Check the Answer Function ----------*/
 function checkAnswer(event) {
   event.preventDefault();
+  // declare a selectedOption variable
   let selectedOption;
-
+  // cycle through each radio button to see what button was selected
   for (let i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].checked) {
       selectedOption = radioButtons[i].value;
     }
   }
+  // if the selected radio button is equal to the answer
   if (selectedOption === ANSWERS[i]) {
+    // update the score counter by 1
     scoreCount.innerText = `${score + 1}/10`;
+    // run the correct answer function
     correctAnswer();
+    // Add '1' to the score so you can keep track of current score
     score = score + 1;
   } else {
+    // if the selected radio button does not equal the answer
+    // run the incorrect answer function
     incorrectAnswer();
   }
-
-  console.log(parseInt(scoreCount.innerText));
-  console.log(QUESTIONS.length);
-  console.log(scoreCount.innerText);
-  console.log(`${QUESTIONS.length}/10`);
   // check to see if the score is "10/10" and if we have reached the last question
   if (scoreCount.innerText === `10/10`) {
     // if it is, then display the winning page
@@ -253,9 +255,9 @@ function checkAnswer(event) {
     console.log(`You've lost`);
   }
 }
-
 //?---------- Next Question Function ----------*/
 function nextQuestion() {
+  // cycle through each question
   if (i < QUESTIONS.length - 1) {
     // reset the page styling
     defaultStyle();
@@ -271,7 +273,6 @@ function nextQuestion() {
     cardCounter.innerText = `${i + 1}/10`;
     // hide the hint and flip back to question
     hideHint();
-
     // Set answer options
     answerLabelOne.innerText = questionOptions.answer1[i];
     answerLabelTwo.innerText = questionOptions.answer2[i];
@@ -284,10 +285,14 @@ function nextQuestion() {
     answerFourEl.value = questionOptions.answer4[i];
   }
 }
+//?---------- Previous Question Function ----------*/
 function previousQuestion() {
   if (i !== 0) {
     // reset the page styling
     defaultStyle();
+    // if you go back to the last question, disable the checkAnswerBtn
+    checkAnswerBtn.style.backgroundColor = 'gray';
+    checkAnswerBtn.disabled = true;
     // move to the next iteration
     i--;
     // set question card text
@@ -300,7 +305,6 @@ function previousQuestion() {
     cardCounter.innerText = `${i + 1}/10`;
     // hide the hint and flip back to question
     hideHint();
-
     // Set answer options
     answerLabelOne.innerText = questionOptions.answer1[i];
     answerLabelTwo.innerText = questionOptions.answer2[i];
@@ -313,13 +317,17 @@ function previousQuestion() {
     answerFourEl.value = questionOptions.answer4[i];
   }
 }
-
+//?---------- Show Hint Function ----------*/
 function showHint() {
+  // transform the flipCardInner on the X axis
   flipCardInner.style.transform = 'rotateX(180deg)';
 }
+//?---------- Hide Hint Function ----------*/
 function hideHint() {
+  // transform the flipCardInner on the X axis
   flipCardInner.style.transform = 'rotateX(0deg)';
 }
+//?---------- Win Message Function ----------*/
 function goodJobMessage() {
   // create and append a congratulatory message
   // create div
@@ -335,16 +343,23 @@ function goodJobMessage() {
   // append p to div
   goodJobDiv.appendChild(goodJobMsg);
 }
+//?---------- Lose Message Function ----------*/
 function losingMessage() {
   // create and append a losing message
+  // create div
   let losingDiv = document.createElement('div');
+  // set the attribute id
   losingDiv.setAttribute('id', 'bad-job');
+  // append div to form element
   formEl.appendChild(losingDiv);
+  // create p
   let losingMessage = document.createElement('p');
+  // set the inner text of p
   losingMessage.innerText = `Better luck next time!`;
+  // append p to div
   losingDiv.appendChild(losingMessage);
 }
-
+//?---------- Default Style Function ----------*/
 function defaultStyle() {
   // remove radio button selection
   for (let i = 0; i < radioButtons.length; i++) {
@@ -374,11 +389,14 @@ function defaultStyle() {
     document.body.style.background = `linear-gradient(180deg, #5c5b70 0%, #39385a 100%)`;
   }
 }
-
+//?---------- Correct Answer Function ----------*/
 function correctAnswer() {
+  // change check answer button background to gray
   checkAnswerBtn.style.backgroundColor = 'gray';
+  // disable the checkAnswer button after click
   // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
   checkAnswerBtn.disabled = true;
+  // change background depending on dark/style .css
   if (theme.getAttribute('href') == `./css/style.css`) {
     document.body.style.backgroundColor = '#BCE8C1';
   } else if (theme.getAttribute('href') == `./css/dark.css`) {
@@ -386,24 +404,29 @@ function correctAnswer() {
   }
   goodJobMessage();
 }
+//?---------- Incorrect Answer Function ----------*/
 function incorrectAnswer() {
+  // change check answer button background to gray
   checkAnswerBtn.style.backgroundColor = 'gray';
-  checkAnswerBtn.disabled = 'disabled';
-
+  // disable the checkAnswer button after click
+  // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
+  checkAnswerBtn.disabled = true;
+  // change background depending on dark/style .css
   if (theme.getAttribute('href') == `./css/style.css`) {
-    document.body.style.backgroundColor = '#F1BCBC';
-  }
-  if (theme.getAttribute('href') == `./css/dark.css`) {
+    document.body.style.background = '#F1BCBC';
+  } else if (theme.getAttribute('href') == `./css/dark.css`) {
     document.body.style.background = `linear-gradient(180deg, #D08888 0%, #491616 100%)`;
   }
   losingMessage();
 }
-
+//?---------- Dark Theme Function ----------*/
 function darkTheme() {
   // HELPER: https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
+  // if the link href is style.css, then change it to dark.css
   if (theme.getAttribute('href') == `./css/style.css`) {
     theme.setAttribute('href', `./css/dark.css`);
   } else {
+    // if it's not, then leave it at style.css
     theme.setAttribute('href', `./css/style.css`);
   }
 }
