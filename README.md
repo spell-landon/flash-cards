@@ -2,9 +2,13 @@
 
 ## Project Description
 
-> My project is called Flash Card Memory Game. It's a little game to test your memory on a given topic. You will have a card displayed with a question that you must answer via the radio options. Your score will be kept so you can see how many cards you have gotten correct. If you can get every single question correct, a congratulatory message will display at the end. If you cannot get every answer correct, a "Better luck next time"-esque message will display at the end and you will have the option to restart if you so please.
+My project is called Flash Card Memory Game. It's a little game to test your memory on a given topic. You will have a card displayed with a question that you must answer via the radio options. Your score will be kept so you can see how many cards you have gotten correct. If you can get every single question correct, a congratulatory message will display at the end. If you cannot get every answer correct, a "Better luck next time"-esque message will display at the end and you will have the option to restart if you so please.
 
-> Play along and see if you can get all of the questions correct! Good luck!
+Play along and see if you can get all of the questions correct! Good luck!
+
+> Screenshot of active gameplay
+
+<img src='./assets/wireframe-imgs/screenshot_gameplay.png' alt='Screenshot of active gameplay' width="600px">
 
 ## Planning Process
 
