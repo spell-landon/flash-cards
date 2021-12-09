@@ -189,6 +189,7 @@ function checkAnswer(event) {
   } else {
     incorrectAnswer();
   }
+  //! maybe just write out each area and add/remove the classlist for the dark mode. trigger with the same switch. 
   //! FIGURE OUT THE WINNING/LOSING LOGIC
   // // check to see if the score is "10/10"
   // if (scoreCount.innerText === `10/10` && QUESTIONS.length - 1 === 10) {
@@ -227,6 +228,7 @@ function nextQuestion() {
     answerThreeEl.value = questionOptions.answer3[i];
     answerFourEl.value = questionOptions.answer4[i];
   }
+
 }
 function previousQuestion() {
   if (i !== 0) {

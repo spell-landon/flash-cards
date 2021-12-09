@@ -24,7 +24,7 @@
     />
     <title>Flash Cards</title>
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" id="stylesheet" />
     <!-- <link rel="stylesheet alternate" href="./css/dark.css" /> -->
     <link rel="stylesheet" href="./css/font-awesome-all.css" />
   </head>
@@ -47,6 +47,11 @@
 
     <main>
       <section class="game-start-page">
+        <img
+          src="./assets/undraw_playing_cards_cywn.svg"
+          alt="playing cards image"
+          id="hero-img"
+        />
         <h1>Welcome to the Flash Card Memory Game</h1>
         <p>
           The rules are simple, you test your own memory with the flash cards. A
@@ -60,9 +65,10 @@
 
       <section class="game-board hidden">
         <!-- CARD COUNTER -->
-        <h2 class="card-counter"></h2>
+        <h2 class="card-counter"><!-- Updated via script.js --></h2>
         <!-- CARD and ARROW BUTTONS -->
         <section class="card-and-buttons">
+          <!-- Arrow button LEFT -->
           <button id="arrowBtn"><i class="fas fa-arrow-left"></i></button>
           <!-- CARD (FLIP) -->
           <div class="flip-card">
@@ -84,6 +90,7 @@
             </div>
           </div>
           <!-- END CARD (FLIP) -->
+          <!-- Arrow button RIGHT -->
           <button id="arrowBtn"><i class="fas fa-arrow-right"></i></button>
         </section>
         <!-- FORM FOR ANSWERS -->
