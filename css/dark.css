@@ -15,6 +15,7 @@ body {
   background: linear-gradient(180deg, #5c5b70 0%, #39385a 100%);
 }
 .hidden {
+  /* display: none; */
   visibility: hidden;
 }
 /*? HEADER SECTION */
@@ -59,6 +60,19 @@ main {
 }
 /*? HEADER SECTION ----- END */
 /*? START GAME PAGE */
+#hero-img {
+  position: absolute;
+  z-index: -1;
+  float: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
 .game-start-page {
   position: absolute;
   text-align: center;
@@ -85,7 +99,7 @@ main {
   border-radius: 15px;
   font-size: 18px;
   font-weight: 200;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2rem;
   margin: 3.5rem;
 }
 .start-game-btn:hover {
@@ -112,9 +126,6 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-.game-board > h2 {
-  color: white;
 }
 .card-and-buttons {
   display: -webkit-box;
@@ -156,6 +167,7 @@ main {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 15px;
+
   background: linear-gradient(180deg, #fffbec 0%, #dbc988 100%);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -172,13 +184,11 @@ main {
 }
 .flip-card-front {
   color: white;
-  background: linear-gradient(180deg, #fffbec 0%, #dbc988 100%);
 }
 .flip-card-back {
   color: white;
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
-  background-color: linear-gradient(180deg, #fffbec 0%, #dbc988 100%);
 }
 #card-text-question {
   font-size: 24px;
@@ -249,7 +259,6 @@ main {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
   background-color: transparent;
-  color: white;
 }
 #arrowBtn:hover {
   color: rgb(78, 188, 59);
@@ -273,7 +282,6 @@ form {
   max-width: 650px;
   font-size: 20px;
   text-align: left;
-  color: white;
 }
 #question-1 > div {
   padding: 1rem 0;
@@ -283,7 +291,7 @@ form {
 .check-answer {
   height: 30px;
   width: 200px;
-  background-color: #3a643e;
+  background-color: #bce8c1;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
@@ -293,10 +301,10 @@ form {
   margin-top: 3rem;
 }
 .check-answer:hover {
-  background-color: #336038;
+  background-color: #a4deac;
 }
 .check-answer:active {
-  background-color: #406944;
+  background-color: rgb(172, 229, 180);
 }
 /* CHECK ANSWER BUTTON ----- END */
 
@@ -320,10 +328,9 @@ form {
 /* BOTTOM HINT */
 .game-board > p {
   font-size: 12px;
-  color: white;
 }
 .game-board > p > i {
-  color: #c6bcbc;
+  color: #705b5b;
 }
 /* BOTTOM HINT ----- END */
 
@@ -409,3 +416,86 @@ form {
   text-align: center;
 }
 /* MESSAGE IN FORM ----- END */
+
+/* .display-none {
+  display: none;
+  visibility: hidden;
+} */
+/* WINNING PAGE */
+.winning-page {
+  position: absolute;
+  height: 100vh;
+  /* z-index: -1; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #bce8c1;
+  margin-bottom: 8rem;
+}
+.winning-page > h1 {
+  font-size: 36px;
+  padding: 1rem;
+}
+.winning-page > h2 {
+  font-size: 30px;
+  padding: 1rem;
+  font-weight: 300;
+}
+.winning-page > p {
+  font-size: 18px;
+  padding: 0.5rem;
+}
+/* WINNING PAGE ----- END */
+/* LOSING PAGE */
+.losing-page {
+  position: absolute;
+  height: 100vh;
+  /* z-index: -1; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f1bcbc;
+  margin-bottom: 8rem;
+}
+.losing-page > h1 {
+  font-size: 36px;
+  padding: 1rem;
+}
+.losing-page > h2 {
+  font-size: 30px;
+  padding: 1rem;
+  font-weight: 300;
+}
+.losing-page > p {
+  font-size: 18px;
+  padding: 0.5rem;
+}
+/* LOSING PAGE ----- END */
+
+/* RADIO BUTTON STYLE */
+.radio {
+  background-color: red;
+}
+/* RADIO BUTTON STYLE ----- END */

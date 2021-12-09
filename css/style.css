@@ -10,10 +10,8 @@ body {
   height: 100vh;
   max-width: 1500px;
   margin: 0 auto;
-  /* background-color: white; */
 }
 .hidden {
-  /* display: none; */
   visibility: hidden;
 }
 /*? HEADER SECTION */
@@ -63,9 +61,12 @@ main {
   float: left;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0.05;
-  filter: grayscale(50%);
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
 }
 .game-start-page {
   position: absolute;
@@ -92,7 +93,7 @@ main {
   border-radius: 15px;
   font-size: 18px;
   font-weight: 200;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2rem;
   margin: 3.5rem;
 }
 .start-game-btn:hover {
@@ -160,19 +161,18 @@ main {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 15px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#5c5b70),
-    color-stop(99.99%, #39385a),
-    to(rgba(55, 54, 89, 0))
-  );
   background: -o-linear-gradient(
     top,
     #5c5b70 0%,
     #39385a 99.99%,
     rgba(55, 54, 89, 0) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(#5c5b70),
+    color-stop(99.99%, #39385a),
+    to(rgba(55, 54, 89, 0))
   );
   background: linear-gradient(
     180deg,

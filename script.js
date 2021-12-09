@@ -78,7 +78,6 @@ const questionOptions = {
 
 let i = 0;
 let score = Number();
-let isDarkTheme = false;
 
 //*---------------------------------------*/
 //*------ cached element references ------*/
@@ -130,7 +129,7 @@ restartBtn.forEach((button) => {
 });
 hintBtn.addEventListener('click', showHint);
 hideHintBtn.addEventListener('click', hideHint);
-toggleTheme.addEventListener('click', changeTheme);
+toggleTheme.addEventListener('click', darkTheme);
 
 //*---------------------------------------*/
 //*-------------- functions --------------*/
@@ -154,7 +153,7 @@ function init() {
   endLosingPage.classList.add('hidden');
   defaultStyle();
   // show header
-  header.classList.remove('hidden')
+  header.classList.remove('hidden');
 }
 init();
 
@@ -240,7 +239,6 @@ function checkAnswer(event) {
   console.log(QUESTIONS.length);
   console.log(scoreCount.innerText);
   console.log(`${QUESTIONS.length}/10`);
-  //! maybe just write out each area and add/remove the classlist for the dark mode. trigger with the same switch.
   // check to see if the score is "10/10" and if we have reached the last question
   if (scoreCount.innerText === `10/10`) {
     // if it is, then display the winning page
@@ -382,34 +380,11 @@ function incorrectAnswer() {
   losingMessage();
 }
 
-function changeTheme(cssFile, cssLinkIndex) {
-  // https://stackoverflow.com/questions/19844545/replacing-css-file-on-the-fly-and-apply-the-new-style-to-the-page
-  // TYLER also helped out on this portion as well.
-  isDarkTheme = !isDarkTheme;
-  if (isDarkTheme) {
-    // default link
-    let defaultLink = document.getElementsByTagName('link').item(cssLinkIndex);
-
-    let darkCSS = document.createElement('link');
-    darkCSS.setAttribute('rel', 'stylesheet');
-    darkCSS.setAttribute('href', './css/dark.css');
-
-    document
-      .getElementsByTagName('head')
-      .item(cssLinkIndex)
-      .replaceChild(darkCSS, defaultLink);
+function darkTheme() {
+  let theme = document.getElementById('theme');
+  if (theme.getAttribute('href') == `./css/style.css`) {
+    theme.setAttribute('href', `./css/dark.css`);
   } else {
-    //* switch everything around from above...
-    // default link
-    let defaultLink = document.getElementsByTagName('link').item(cssLinkIndex);
-
-    let defaultCSS = document.createElement('link');
-    defaultCSS.setAttribute('rel', 'stylesheet');
-    defaultCSS.setAttribute('href', './css/style.css');
-
-    document
-      .getElementsByTagName('head')
-      .item(cssLinkIndex)
-      .replaceChild(defaultCSS, defaultLink);
+    theme.setAttribute('href', `./css/style.css`);
   }
 }
