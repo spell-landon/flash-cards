@@ -509,3 +509,120 @@ form {
   padding: 0.5rem;
 }
 /* LOSING PAGE ----- END */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  html,
+  body {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  header {
+    /* border: 1px solid red; */
+    padding: 0.5rem;
+  }
+  header > .hero-title {
+    font-size: 12px;
+  }
+  .game-start-page {
+    margin: 0 auto;
+    max-width: 100%;
+    margin-top: 3rem;
+    /* border: 1px solid red; */
+  }
+  .game-start-page > h1 {
+    padding: 1rem;
+    /* border: 1px solid red; */
+    margin-bottom: 1rem;
+  }
+  .game-start-page > p {
+    /* border: 1px solid red; */
+    padding: 0 1.5rem;
+  }
+  #hero-img {
+    display: none;
+  }
+  .start-game-btn {
+    color: black;
+    margin-top: 5rem;
+  }
+  .switch {
+    height: 20px;
+  }
+  .slider:before {
+    height: 12px;
+    width: 12px;
+  }
+  #toggle:checked + .slider:before {
+    transform: translateX(40px);
+  }
+  main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .game-board {
+    margin-top: -5rem;
+    border: 1px solid red;
+  }
+  .flip-card {
+    height: 200px;
+    width: 280px;
+    margin: 0.5rem 0.5rem;
+  }
+  #card-text-question {
+    font-size: 14px;
+    width: 200px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  #card-text-answer {
+    font-size: 18px;
+    width: 200px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  .flip-card-front > button {
+    margin-top: 110px;
+    margin-left: 230px;
+  }
+  .flip-card-back > button {
+    margin-top: 130px;
+    margin-left: 230px;
+  }
+  #arrowBtn {
+    font-size: 18px;
+  }
+  i {
+    margin: 0rem;
+    padding: 0rem;
+    color: black;
+  }
+  form {
+    font-size: 12px;
+    width: 280px;
+    align-items: center;
+  }
+  #question-1 > div {
+    padding: 0.4rem 0;
+  }
+  .check-answer {
+    margin-top: 1rem;
+    color: black;
+  }
+  .restart {
+    margin-top: 5rem;
+    color: black;
+  }
+  .game-board > p {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+}
