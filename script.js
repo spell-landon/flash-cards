@@ -83,6 +83,7 @@ let isDarkTheme = false;
 //*---------------------------------------*/
 //*------ cached element references ------*/
 //*---------------------------------------*/
+const header = document.querySelector('#header');
 const startBtn = document.querySelector('.start-game-btn');
 const startPageEl = document.querySelector('.game-start-page');
 const scoreSection = document.querySelector('.score-section');
@@ -152,6 +153,8 @@ function init() {
   endWinningPage.classList.add('hidden');
   endLosingPage.classList.add('hidden');
   defaultStyle();
+  // show header
+  header.classList.remove('hidden')
 }
 init();
 
@@ -197,6 +200,8 @@ function winningPage() {
   // hide the win/lose pages
   endWinningPage.classList.remove('hidden');
   endLosingPage.classList.add('hidden');
+  // hide header
+  header.classList.add('hidden');
 }
 //?---------- Losing Page Function ----------*/
 function losingPage() {
@@ -209,6 +214,8 @@ function losingPage() {
   // hide the win/lose pages
   endWinningPage.classList.add('hidden');
   endLosingPage.classList.remove('hidden');
+  // hide header
+  header.classList.add('hidden');
 }
 
 //?---------- Check the Answer Function ----------*/

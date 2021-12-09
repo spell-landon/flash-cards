@@ -10,7 +10,7 @@ body {
   height: 100vh;
   max-width: 1500px;
   margin: 0 auto;
-  background-color: white;
+  /* background-color: white; */
 }
 .hidden {
   /* display: none; */
@@ -452,6 +452,8 @@ form {
   align-items: center;
   width: 100%;
   background-color: #bce8c1;
+  margin-bottom: 8rem;
+
 }
 .winning-page > h1 {
   font-size: 36px;
@@ -487,6 +489,7 @@ form {
   align-items: center;
   width: 100%;
   background-color: #f1bcbc;
+  margin-bottom: 8rem;
 }
 .losing-page > h1 {
   font-size: 36px;
