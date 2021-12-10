@@ -79,6 +79,7 @@ const questionOptions = {
 let i = 0;
 let score = Number();
 let theme = document.getElementById('theme');
+//! Declare an object for color variables and switch the colors when the darkTheme function is run
 
 //*---------------------------------------*/
 //*------ cached element references ------*/
