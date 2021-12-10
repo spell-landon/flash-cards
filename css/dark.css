@@ -271,7 +271,7 @@ main {
 /* CARD ----- END */
 
 /* ARROW BUTTONS */
-#arrowBtn {
+.arrowBtn {
   font-size: 24px;
   height: 1rem;
   border: none;
@@ -281,10 +281,10 @@ main {
   background-color: transparent;
   color: white;
 }
-#arrowBtn:hover {
+.arrowBtn:hover {
   color: rgb(78, 188, 59);
 }
-#arrowBtn:active {
+.arrowBtn:active {
   color: rgb(148, 229, 134);
 }
 i {
@@ -636,13 +636,13 @@ form {
     height: 30px;
     width: 30px;
   }
-  #arrowBtn {
+  .arrowBtn {
     font-size: 14px;
     text-align: center;
     padding: 1rem;
     padding-bottom: 2rem;
   }
-  #arrowBtn > i {
+  .arrowBtn > i {
     padding: 0rem;
     color: white;
   }
