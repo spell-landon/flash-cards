@@ -171,8 +171,7 @@ main {
   );
   background: -webkit-gradient(
     linear,
-    left top,
-    left bottom,
+    left top, left bottom,
     from(#5c5b70),
     color-stop(99.99%, #39385a),
     to(rgba(55, 54, 89, 0))
@@ -558,7 +557,9 @@ form {
     width: 12px;
   }
   #toggle:checked + .slider:before {
-    transform: translateX(40px);
+    -webkit-transform: translateX(40px);
+        -ms-transform: translateX(40px);
+            transform: translateX(40px);
   }
   main {
     margin: 0;
@@ -566,8 +567,13 @@ form {
     height: 100%;
   }
   .game-board {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: -5rem;
   }
   .flip-card {
@@ -629,7 +635,9 @@ form {
   form {
     font-size: 16px;
     width: 280px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     padding: 0;
   }
@@ -643,7 +651,6 @@ form {
     border: 1px solid rgba(52, 48, 110, 0.149);
     border-radius: 15px;
     margin: 0.2rem 0;
-    padding: -1rem;
     width: 250px;
   }
   .check-answer {
@@ -656,7 +663,9 @@ form {
   .restart {
     margin-top: 2.6rem;
     color: black;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-weight: 300;
   }
   .game-board > p {
