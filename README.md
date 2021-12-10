@@ -12,7 +12,7 @@ Play along and see if you can get all of the questions correct! Good luck!
 
 > Optimized for mobile play
 
-<img src="./assets/wireframe-imgs/mobile_start_game.png" alt="Screenshot of mobile start game page" width="400px">
+<img src='./assets/wireframe-imgs/mobile_start_game.png' alt='Screenshot of mobile start game page' width="500px">
 
 ## Technologies Used
 
