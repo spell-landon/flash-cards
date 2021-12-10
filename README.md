@@ -10,6 +10,24 @@ Play along and see if you can get all of the questions correct! Good luck!
 
 <img src='./assets/wireframe-imgs/screenshot_gameplay.png' alt='Screenshot of active gameplay' width="600px">
 
+## Technologies Used
+
+- HTML
+- CSS, flexbox, css:selectors
+- JavaScript
+
+## Installation Instructions
+
+To install this repository:
+
+- If you would like to fork the repository so you have your own copy, feel free to!
+- Click on the green "Code" button.
+- Copy either the HTTPS or SSH link that is provided
+- Open up the Terminal and navigate to the desired file location
+- Once inside, use the code `git clone copied_link`
+- Once the repo has been installed, change into the directory with `cd flash-cards`
+- From here you can run `code .` to open it up in VS Code
+
 ## Planning Process
 
 ### User Stories
@@ -87,3 +105,18 @@ Play along and see if you can get all of the questions correct! Good luck!
 > Example of a Dark Theme when you lose the game
 
 <img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="1000px">
+
+## Major Hurdles / Unsolved Problems
+
+> The big thing that took a while to complete was figuring out the game win/lose logic. At first I wanted to compare the `scoreCount.innerText` to the length of the `QUESTIONS` array, but that was not giving me the necessary output. I managed to overcome that by using:
+
+```
+if (scoreCount.innerText === `10/10`) {
+    winningPage();
+} else if (scoreCount.innerText !== `10/10` && cardCounter.innerText === `10/10`) {
+    losingPage();
+}
+```
+
+> The dark theme switch has also proven to be a challenge. Currently it works, but I plan to squash the bugs in a later update. Right now, the switch changes the HTML link to a `./css/dark.css`, but the logic within `./script.js` has a few problems with implementing the switch. Primarily when a question has been answered, but the "Next Question" arrow has NOT been pressed, and the user would like to switch themes, the result is the background not switching from light to dark on "correct" or "incorrect" answer pages.
+> I plan to fix the theme switch problem by implementing an object in `script.js` that will hold all of the necessary colors and will be accessible during the switch.

@@ -1,3 +1,4 @@
 1. Change the .html header .hero-title to a button, then add a querySelector in .js for the button with the click event handler to run the 'reset' function.
 2. style #1's button with no border, and transparent background to make it seem as if it's just text.
 3. review all z-indexes to see if any can be removed.
+4. Fix the dark theme bugs when switched during active correct/incorrect answer page

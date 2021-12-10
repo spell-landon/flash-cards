@@ -253,7 +253,6 @@ function checkAnswer(event) {
     cardCounter.innerText === `10/10`
   ) {
     losingPage();
-    console.log(`You've lost`);
   }
 }
 //?---------- Next Question Function ----------*/

@@ -353,6 +353,7 @@ form {
 }
 /* BOTTOM HINT ----- END */
 
+/* HELPER: https://www.w3schools.com/howto/howto_css_switch.asp */
 /* SWITCH CONTAINER */
 .switch-container {
   z-index: 10;
