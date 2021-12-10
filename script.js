@@ -4,6 +4,8 @@
 let i = 0;
 let score = Number();
 let theme = document.getElementById('theme');
+//!
+let clicked = 0;
 
 //*---------------------------------------*/
 //*------ cached element references ------*/
@@ -198,6 +200,10 @@ function checkAnswer(event) {
 }
 //?---------- Next Question Function ----------*/
 function nextQuestion() {
+  // reset clicked to 0
+  clicked = 0;
+  // reset the hintBtn background color
+  hintBtn.style.backgroundColor = `#f2deab`;
   // cycle through each question
   if (i < QUESTIONS.length - 1) {
     // reset the page styling
@@ -239,9 +245,8 @@ function previousQuestion() {
     // set question card text
     cardTextQuestionEl.innerText = QUESTIONS[i];
     // set answer card text
-    setTimeout(function () {
-      cardTextAnswerEl.innerText = ANSWERS[i];
-    }, 1000);
+    cardTextAnswerEl.innerText = ANSWERS[i];
+
     // add 1 to the card counter
     cardCounter.innerText = `${i + 1}/10`;
     // hide the hint and flip back to question
@@ -260,10 +265,17 @@ function previousQuestion() {
 }
 //?---------- Show Hint Function ----------*/
 function showHint() {
-  // transform the flipCardInner on the X axis
-  flipCardInner.style.transform = 'rotateX(180deg)';
-  // play audio on flip
-  playCardFlip();
+  while (clicked < 1) {
+    // transform the flipCardInner on the X axis
+    flipCardInner.style.transform = 'rotateX(180deg)';
+    // play audio on flip
+    playCardFlip();
+    clicked++;
+  }
+  if (clicked === 1) {
+    hintBtn.style.backgroundColor = 'gray';
+  }
+  setTimeout(hideHint, 800);
 }
 //?---------- Hide Hint Function ----------*/
 function hideHint() {
