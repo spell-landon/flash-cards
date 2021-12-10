@@ -10,6 +10,10 @@ Play along and see if you can get all of the questions correct! Good luck!
 
 <img src='./assets/wireframe-imgs/screenshot_gameplay.png' alt='Screenshot of active gameplay' width="600px">
 
+> Optimized for mobile play
+
+<img src="./assets/wireframe-imgs/mobile_start_game.png" alt="Screenshot of mobile start game page" width="400px">
+
 ## Technologies Used
 
 - HTML
