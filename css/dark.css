@@ -48,10 +48,7 @@ header > .hero-title {
   transition: all 0.2s ease;
 }
 header > .hero-title:hover {
-  background-color: rgba( 85, 83, 116, 100%);
-}
-header > .hero-title:active {
-  background-color: rgb(104, 101, 137);
+  background-color: rgba(85, 83, 116, 100%);
 }
 .score-section {
   text-align: center;
@@ -76,7 +73,6 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 95%;
 }
 /*? HEADER SECTION ----- END */
 
@@ -376,8 +372,8 @@ form {
 
 /* SWITCH CONTAINER */
 .switch-container {
-  /* border: 1px solid red; */
   z-index: 10;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,6 +384,8 @@ form {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
 }
 /* SWITCH CONTAINER ----- END */
 /* The switch - the box around the slider */

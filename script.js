@@ -43,6 +43,8 @@ const checkAnswerBtn = document.querySelector('.check-answer');
 // ending pages
 const endWinningPage = document.querySelector('.winning-page');
 const endLosingPage = document.querySelector('.losing-page');
+//www.codegrepper.com/code-examples/javascript/how+to+trigger+an+audio+clip+when+button+is+clicked+html
+const cardFlipAudio = new Audio(`./assets/Card-flip-sound-effect.mp3`);
 
 //*---------------------------------------*/
 //*----------- event listeners -----------*/
@@ -62,6 +64,10 @@ toggleTheme.addEventListener('click', darkTheme);
 //*---------------------------------------*/
 //*-------------- functions --------------*/
 //*---------------------------------------*/
+//?---------- Play card flip audio ----------*/
+function playCardFlip() {
+  cardFlipAudio.play();
+}
 //?---------- Initalize the page ----------*/
 function init() {
   // set i to 0
@@ -207,7 +213,7 @@ function nextQuestion() {
     // add 1 to the card counter
     cardCounter.innerText = `${i + 1}/10`;
     // hide the hint and flip back to question
-    hideHint();
+    flipCardInner.style.transform = 'rotateX(0deg)';
     // Set answer options
     answerLabelOne.innerText = questionOptions.answer1[i];
     answerLabelTwo.innerText = questionOptions.answer2[i];
@@ -239,7 +245,7 @@ function previousQuestion() {
     // add 1 to the card counter
     cardCounter.innerText = `${i + 1}/10`;
     // hide the hint and flip back to question
-    hideHint();
+    flipCardInner.style.transform = 'rotateX(0deg)';
     // Set answer options
     answerLabelOne.innerText = questionOptions.answer1[i];
     answerLabelTwo.innerText = questionOptions.answer2[i];
@@ -256,11 +262,15 @@ function previousQuestion() {
 function showHint() {
   // transform the flipCardInner on the X axis
   flipCardInner.style.transform = 'rotateX(180deg)';
+  // play audio on flip
+  playCardFlip();
 }
 //?---------- Hide Hint Function ----------*/
 function hideHint() {
   // transform the flipCardInner on the X axis
   flipCardInner.style.transform = 'rotateX(0deg)';
+  // play audio on flip
+  playCardFlip();
 }
 //?---------- Win Message Function ----------*/
 function goodJobMessage() {

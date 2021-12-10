@@ -9,3 +9,13 @@
 5. ❌ Fix 'check answer' button, if user goes to the previous question, and then back to the currently answered question, keep the disabled status of 'check answer' button
 
 6. ❌ fix check answer background hover effect
+
+7. ❌ Add checked option when going to previous button
+
+8. ✅ fix toggle placement
+
+9. ❌ show hint only once during round
+
+10. ❌ Only go to next question if option is selected
+
+11. ✅ Add audio flipping effect
