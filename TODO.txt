@@ -7,3 +7,5 @@
 4. ✅ Fix the dark theme bugs when switched during active correct/incorrect answer page
 
 5. ❌ Fix 'check answer' button, if user goes to the previous question, and then back to the currently answered question, keep the disabled status of 'check answer' button
+
+6. ❌ fix check answer background hover effect

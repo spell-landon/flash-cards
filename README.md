@@ -114,7 +114,7 @@ To install this repository:
 
 > The big thing that took a while to complete was figuring out the game win/lose logic. At first I wanted to compare the `scoreCount.innerText` to the length of the `QUESTIONS` array, but that was not giving me the necessary output. I managed to overcome that by using:
 
-```
+```js
 if (scoreCount.innerText === `10/10`) {
     winningPage();
 } else if (scoreCount.innerText !== `10/10` && cardCounter.innerText === `10/10`) {
@@ -128,7 +128,7 @@ if (scoreCount.innerText === `10/10`) {
 
 > UPDATE: The theme switch toggle has now been fixed. The solution was to create separate classes within each CSS file to set the background to a certain color. Example:
 
-```
+```css
 .correct-question {
     background: #bce8c1;
 }

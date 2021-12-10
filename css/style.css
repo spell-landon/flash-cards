@@ -34,7 +34,11 @@ header > .hero-title {
   background-color: transparent;
   color: black;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.5s ease;
+}
+header > .hero-title:hover {
+  background-color: rgba(187, 232, 192, 0.5);
 }
 .score-section {
   text-align: center;
