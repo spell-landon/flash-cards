@@ -85,6 +85,7 @@ let theme = document.getElementById('theme');
 //*------ cached element references ------*/
 //*---------------------------------------*/
 const header = document.querySelector('#header');
+const headerBtn = document.querySelector('.hero-title');
 const startBtn = document.querySelector('.start-game-btn');
 const startPageEl = document.querySelector('.game-start-page');
 const scoreSection = document.querySelector('.score-section');
@@ -122,6 +123,7 @@ const endLosingPage = document.querySelector('.losing-page');
 //*---------------------------------------*/
 //*----------- event listeners -----------*/
 //*---------------------------------------*/
+headerBtn.addEventListener('click', init);
 startBtn.addEventListener('click', startGame);
 formEl.addEventListener('submit', checkAnswer);
 nextArrow.addEventListener('click', nextQuestion);

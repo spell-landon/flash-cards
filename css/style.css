@@ -28,6 +28,14 @@ header {
   font-size: 14px;
   padding-bottom: 1rem;
 }
+header > .hero-title {
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 0.5rem;
+}
 .score-section {
   text-align: center;
 }
@@ -171,7 +179,8 @@ main {
   );
   background: -webkit-gradient(
     linear,
-    left top, left bottom,
+    left top,
+    left bottom,
     from(#5c5b70),
     color-stop(99.99%, #39385a),
     to(rgba(55, 54, 89, 0))
@@ -559,8 +568,8 @@ form {
   }
   #toggle:checked + .slider:before {
     -webkit-transform: translateX(40px);
-        -ms-transform: translateX(40px);
-            transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    transform: translateX(40px);
   }
   main {
     margin: 0;
@@ -573,8 +582,8 @@ form {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-top: -5rem;
   }
   .flip-card {
@@ -637,8 +646,8 @@ form {
     font-size: 16px;
     width: 280px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
     padding: 0;
   }
@@ -665,8 +674,8 @@ form {
     margin-top: 2.6rem;
     color: black;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     font-weight: 300;
   }
   .game-board > p {
