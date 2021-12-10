@@ -122,5 +122,16 @@ if (scoreCount.innerText === `10/10`) {
 }
 ```
 
-> The dark theme switch has also proven to be a challenge. Currently it works, but I plan to squash the bugs in a later update. Right now, the switch changes the HTML link to a `./css/dark.css`, but the logic within `./script.js` has a few problems with implementing the switch. Primarily when a question has been answered, but the "Next Question" arrow has NOT been pressed, and the user would like to switch themes, the result is the background not switching from light to dark on "correct" or "incorrect" answer pages.
-> I plan to fix the theme switch problem by implementing an object in `script.js` that will hold all of the necessary colors and will be accessible during the switch.
+> ~~The dark theme switch has also proven to be a challenge. Currently it works, but I plan to squash the bugs in a later update. Right now, the switch changes the HTML link to a `./css/dark.css`, but the logic within `./script.js` has a few problems with implementing the switch. Primarily when a question has been answered, but the "Next Question" arrow has NOT been pressed, and the user would like to switch themes, the result is the background not switching from light to dark on "correct" or "incorrect" answer pages.~~
+
+> ~~I plan to fix the theme switch problem by implementing an object in `script.js` that will hold all of the necessary colors and will be accessible during the switch.~~
+
+> UPDATE: The theme switch toggle has now been fixed. The solution was to create separate classes within each CSS file to set the background to a certain color. Example:
+
+```
+.correct-question {
+    background: #bce8c1;
+}
+```
+
+> This allowed me to activate each color within JavaScript using the classList.add/remove properties to set the background color of the body.
