@@ -79,7 +79,6 @@ const questionOptions = {
 let i = 0;
 let score = Number();
 let theme = document.getElementById('theme');
-//! Declare an object for color variables and switch the colors when the darkTheme function is run
 
 //*---------------------------------------*/
 //*------ cached element references ------*/
@@ -146,8 +145,6 @@ function init() {
   score = 0;
   // set score innertext
   scoreCount.innerText = `${score}/10`;
-  // set the initial body background color
-  document.body.style.backgroundColor = 'white';
   // hide the score board section
   scoreSection.classList.add('hidden');
   // hide the main game board section
@@ -164,6 +161,17 @@ function init() {
   header.classList.remove('hidden');
 }
 init();
+//?---------- Dark Theme Function ----------*/
+function darkTheme() {
+  // HELPER: https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
+  // if the link href is style.css, then change it to dark.css
+  if (theme.getAttribute('href') == `./css/style.css`) {
+    theme.setAttribute('href', `./css/dark.css`);
+  } else {
+    // if it's not, then leave it at style.css
+    theme.setAttribute('href', `./css/style.css`);
+  }
+}
 //?---------- Start the game function ----------*/
 function startGame() {
   // enable the check answer button
@@ -371,8 +379,6 @@ function defaultStyle() {
   checkAnswerBtn.style.backgroundColor = '#bce8c1';
   // enable the check answer button
   checkAnswerBtn.disabled = false;
-  // background color to white
-  document.body.style.backgroundColor = 'white';
   // remove previous win/lose message
   let winMsg = document.getElementById('good-job');
   let loseMsg = document.getElementById('bad-job');
@@ -383,13 +389,9 @@ function defaultStyle() {
   if (formEl.contains(loseMsg)) {
     formEl.removeChild(loseMsg);
   }
-  // reset background depending on dark theme
-  if (theme.getAttribute('href') == `./css/style.css`) {
-    document.body.style.backgroundColor = 'white';
-  }
-  if (theme.getAttribute('href') == `./css/dark.css`) {
-    document.body.style.background = `linear-gradient(180deg, #5c5b70 0%, #39385a 100%)`;
-  }
+  // reset background depending on css style
+  document.body.classList.remove('correct-question');
+  document.body.classList.remove('incorrect-question');
 }
 //?---------- Correct Answer Function ----------*/
 function correctAnswer() {
@@ -398,12 +400,8 @@ function correctAnswer() {
   // disable the checkAnswer button after click
   // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
   checkAnswerBtn.disabled = true;
-  // change background depending on dark/style .css
-  if (theme.getAttribute('href') == `./css/style.css`) {
-    document.body.style.backgroundColor = '#BCE8C1';
-  } else if (theme.getAttribute('href') == `./css/dark.css`) {
-    document.body.style.background = `linear-gradient(180deg, #6DA587 0%, #164927 100%)`;
-  }
+  // change background depending on css file
+  document.body.classList.add('correct-question');
   goodJobMessage();
 }
 //?---------- Incorrect Answer Function ----------*/
@@ -413,22 +411,7 @@ function incorrectAnswer() {
   // disable the checkAnswer button after click
   // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
   checkAnswerBtn.disabled = true;
-  // change background depending on dark/style .css
-  if (theme.getAttribute('href') == `./css/style.css`) {
-    document.body.style.background = '#e26666';
-  } else if (theme.getAttribute('href') == `./css/dark.css`) {
-    document.body.style.background = `linear-gradient(180deg, #D08888 0%, #491616 100%)`;
-  }
+  // change background depending on css file
+  document.body.classList.add('incorrect-question');
   losingMessage();
-}
-//?---------- Dark Theme Function ----------*/
-function darkTheme() {
-  // HELPER: https://www.geeksforgeeks.org/how-to-switch-between-multiple-css-stylesheets-using-javascript/
-  // if the link href is style.css, then change it to dark.css
-  if (theme.getAttribute('href') == `./css/style.css`) {
-    theme.setAttribute('href', `./css/dark.css`);
-  } else {
-    // if it's not, then leave it at style.css
-    theme.setAttribute('href', `./css/style.css`);
-  }
 }

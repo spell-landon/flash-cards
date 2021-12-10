@@ -541,6 +541,15 @@ form {
 }
 /* LOSING PAGE ----- END */
 
+/* BACKGROUND COLORS */
+.correct-question {
+  background: linear-gradient(180deg, #6da587 0%, #164927 100%);
+}
+.incorrect-question {
+  background: linear-gradient(180deg, #d08888 0%, #491616 100%);
+}
+/* BACKGROUND COLORS ----- END */
+
 @media (max-width: 800px) {
   html,
   body {

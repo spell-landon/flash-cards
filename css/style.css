@@ -519,6 +519,15 @@ form {
 }
 /* LOSING PAGE ----- END */
 
+/* BACKGROUND COLORS */
+.correct-question {
+  background: #bce8c1;
+}
+.incorrect-question {
+  background: #e26666;
+}
+/* BACKGROUND COLORS ----- END */
+
 @media (max-width: 800px) {
   html,
   body {
