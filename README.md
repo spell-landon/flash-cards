@@ -44,31 +44,31 @@ To install this repository:
 
 > Wireframe of game (drawn out in a notebook)
 
-<img src="./assets/wireframe-imgs/gameplay_sketch.jpeg" alt="Notebook sketch of game play" width="600px">
+<img src="./assets/wireframe-imgs/gameplay_sketch.jpeg" alt="Notebook sketch of game play" width="500px">
 
 > Start the game
 
-<img src="./assets/wireframe-imgs/game_start_light.png" alt="Start the game" width="1000px">
+<img src="./assets/wireframe-imgs/game_start_light.png" alt="Start the game" width="600px">
 
 > Gameplay example
 
-<img src="./assets/wireframe-imgs/gameplay_default_light.png" alt="Gameplay inerface example" width="1000px">
+<img src="./assets/wireframe-imgs/gameplay_default_light.png" alt="Gameplay inerface example" width="600px">
 
 > Gameplay - Correct Answer
 
-<img src="./assets/wireframe-imgs/gameplay_correct_light.png" alt="Gameplay - Correct Answer" width="1000px">
+<img src="./assets/wireframe-imgs/gameplay_correct_light.png" alt="Gameplay - Correct Answer" width="600px">
 
 > Gameplay - Incorrect Answer
 
-<img src="./assets/wireframe-imgs/gameplay_incorrect_light.png" alt="Gameplay - Incorrect Answer" width="1000px">
+<img src="./assets/wireframe-imgs/gameplay_incorrect_light.png" alt="Gameplay - Incorrect Answer" width="600px">
 
 > Game End - Win
 
-<img src="./assets/wireframe-imgs/game_end_win_light.png" alt="Game End - Win" width="1000px">
+<img src="./assets/wireframe-imgs/game_end_win_light.png" alt="Game End - Win" width="600px">
 
 > Game End - Lose
 
-<img src="./assets/wireframe-imgs/game_end_lose_light.png" alt="Game End - Lose" width="1000px">
+<img src="./assets/wireframe-imgs/game_end_lose_light.png" alt="Game End - Lose" width="600px">
 
 #### Bronze
 
@@ -96,15 +96,15 @@ To install this repository:
 
 > Example of a Dark Theme during regular game play
 
-<img src="./assets/wireframe-imgs/gameplay_default_dark.png" alt="Example of a Dark Theme during regular game play" width="1000px">
+<img src="./assets/wireframe-imgs/gameplay_default_dark.png" alt="Example of a Dark Theme during regular game play" width="600px">
 
 > Example of a Dark Theme when you win the game
 
-<img src="./assets/wireframe-imgs/game_end_win_dark.png" alt="Example of a Dark Theme when you win the game" width="1000px">
+<img src="./assets/wireframe-imgs/game_end_win_dark.png" alt="Example of a Dark Theme when you win the game" width="600px">
 
 > Example of a Dark Theme when you lose the game
 
-<img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="1000px">
+<img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="600px">
 
 ## Major Hurdles / Unsolved Problems
 
