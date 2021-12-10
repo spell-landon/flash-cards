@@ -510,7 +510,7 @@ form {
 }
 /* LOSING PAGE ----- END */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media (max-width: 800px) {
   html,
   body {
     /* border: 1px solid red; */
@@ -531,8 +531,6 @@ form {
   .game-start-page {
     margin: 0 auto;
     max-width: 100%;
-    margin-top: 3rem;
-    /* border: 1px solid red; */
   }
   .game-start-page > h1 {
     padding: 1rem;
@@ -566,8 +564,9 @@ form {
     height: 100%;
   }
   .game-board {
+    display: flex;
+    flex-direction: column;
     margin-top: -5rem;
-    border: 1px solid red;
   }
   .flip-card {
     height: 200px;
@@ -575,54 +574,112 @@ form {
     margin: 0.5rem 0.5rem;
   }
   #card-text-question {
-    font-size: 14px;
+    font-size: 18px;
     width: 200px;
     line-height: 20px;
     padding: 0;
     margin: 0;
   }
   #card-text-answer {
-    font-size: 18px;
+    font-size: 20px;
     width: 200px;
     line-height: 20px;
     margin: 0;
     padding: 0;
   }
+  .hint-button {
+    font-size: 14px;
+  }
   .flip-card-front > button {
-    margin-top: 110px;
-    margin-left: 230px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    margin-top: 170px;
+    margin-left: 250px;
+  }
+  .hide-hint-button {
+    font-size: 14px;
   }
   .flip-card-back > button {
-    margin-top: 130px;
-    margin-left: 230px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 170px;
+    margin-left: 250px;
+    height: 30px;
+    width: 30px;
   }
   #arrowBtn {
-    font-size: 18px;
+    font-size: 14px;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 2rem;
   }
-  i {
-    margin: 0rem;
+  #arrowBtn > i {
     padding: 0rem;
     color: black;
   }
+  i {
+    padding: 0.5rem;
+  }
   form {
-    font-size: 12px;
+    font-size: 16px;
     width: 280px;
     align-items: center;
+    text-align: center;
+    padding: 0;
   }
-  #question-1 > div {
-    padding: 0.4rem 0;
+  .answerOne,
+  .answerTwo,
+  .answerThree,
+  .answerFour {
+    border: 1px solid rgba(52, 48, 110, 0.149);
+    border-radius: 15px;
+    margin: 0.2rem 0;
+    padding: -1rem;
+    width: 250px;
   }
   .check-answer {
-    margin-top: 1rem;
+    margin-top: 0.2rem;
     color: black;
+    font-weight: 500;
   }
   .restart {
-    margin-top: 5rem;
+    margin-top: 1rem;
     color: black;
+    justify-content: space-between;
+    font-weight: 300;
   }
   .game-board > p {
     width: 100%;
     text-align: center;
     padding: 1rem;
+    display: none;
+  }
+  #good-job,
+  #bad-job {
+    display: none;
+  }
+  .winning-page {
+    padding: 0.5rem;
+  }
+  .winning-page > h2 {
+    text-align: center;
+  }
+  .winning-page > p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .losing-page {
+    padding: 0.5rem;
+  }
+  .losing-page > h2 {
+    text-align: center;
+  }
+  .losing-page > p {
+    font-size: 16px;
+    text-align: center;
   }
 }

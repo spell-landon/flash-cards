@@ -413,7 +413,7 @@ function incorrectAnswer() {
   checkAnswerBtn.disabled = true;
   // change background depending on dark/style .css
   if (theme.getAttribute('href') == `./css/style.css`) {
-    document.body.style.background = '#F1BCBC';
+    document.body.style.background = '#e26666';
   } else if (theme.getAttribute('href') == `./css/dark.css`) {
     document.body.style.background = `linear-gradient(180deg, #D08888 0%, #491616 100%)`;
   }
