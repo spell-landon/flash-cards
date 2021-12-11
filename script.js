@@ -76,7 +76,7 @@ function init() {
   // set score to 0
   score = 0;
   // set score innertext
-  scoreCount.innerText = `${score}/10`;
+  scoreCount.innerText = `${score}/${QUESTIONS.length}`;
   // hide the score board section
   scoreSection.classList.add('hidden');
   // hide the main game board section
@@ -123,7 +123,7 @@ function startGame() {
   // Set card answer innerText to first question
   cardTextAnswerEl.innerText = ANSWERS[i];
   // Set card Counter to current card
-  cardCounter.innerText = `${i + 1}/10`;
+  cardCounter.innerText = `${i + 1}/${QUESTIONS.length}`;
   // hide the win/lose pages
   endWinningPage.classList.add('hidden');
   endLosingPage.classList.add('hidden');
@@ -180,27 +180,29 @@ function checkAnswer(event) {
   // if the selected radio button is equal to the answer
   if (selectedOption === ANSWERS[i]) {
     // update the score counter by 1
-    scoreCount.innerText = `${score + 1}/10`;
+    scoreCount.innerText = `${score + 1}/${QUESTIONS.length}`;
     // run the correct answer function
     correctAnswer();
     // Add '1' to the score so you can keep track of current score
     score = score + 1;
+    //* ANIMATION
     // add score-glow class for scoreCount animation
     scoreCount.classList.add('score-glow');
   } else {
     // if the selected radio button does not equal the answer
     // run the incorrect answer function
     incorrectAnswer();
+    //* ANIMATION
     // add checkAnswerBtn shake (incorrect)
     checkAnswerBtn.classList.add('check-shake');
   }
   // check to see if the score is "10/10" and if we have reached the last question
-  if (scoreCount.innerText === `10/10`) {
+  if (scoreCount.innerText === `${QUESTIONS.length}/${QUESTIONS.length}`) {
     // if it is, then display the winning page
     winningPage();
   } else if (
-    scoreCount.innerText !== `10/10` &&
-    cardCounter.innerText === `10/10`
+    scoreCount.innerText !== `${QUESTIONS.length}/${QUESTIONS.length}` &&
+    cardCounter.innerText === `${QUESTIONS.length}/${QUESTIONS.length}`
   ) {
     losingPage();
   }
@@ -219,6 +221,7 @@ function nextQuestion() {
   checkAnswerBtn.classList.remove(`check-answer-gray`);
   // add back the hover selector
   checkAnswerBtn.classList.add(`check-answer_hover`);
+  //* ANIMATIONS
   // remove score glow
   scoreCount.classList.remove('score-glow');
   // remove checkAnswerBtn shake (incorrect)
@@ -237,7 +240,7 @@ function nextQuestion() {
       cardTextAnswerEl.innerText = ANSWERS[i];
     }, 1000);
     // add 1 to the card counter
-    cardCounter.innerText = `${i + 1}/10`;
+    cardCounter.innerText = `${i + 1}/${QUESTIONS.length}`;
     // hide the hint and flip back to question
     flipCardInner.style.transform = 'rotateX(0deg)';
     // Set answer options
@@ -268,7 +271,7 @@ function previousQuestion() {
     cardTextAnswerEl.innerText = ANSWERS[i];
 
     // add 1 to the card counter
-    cardCounter.innerText = `${i + 1}/10`;
+    cardCounter.innerText = `${i + 1}/${QUESTIONS.length}`;
     // hide the hint and flip back to question
     flipCardInner.style.transform = 'rotateX(0deg)';
     // Set answer options
