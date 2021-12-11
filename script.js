@@ -199,12 +199,18 @@ function checkAnswer(event) {
   // check to see if the score is "10/10" and if we have reached the last question
   if (scoreCount.innerText === `${QUESTIONS.length}/${QUESTIONS.length}`) {
     // if it is, then display the winning page
-    winningPage();
+    // setTimeout to display winning page
+    setTimeout(function () {
+      winningPage();
+    }, 800);
   } else if (
     scoreCount.innerText !== `${QUESTIONS.length}/${QUESTIONS.length}` &&
     cardCounter.innerText === `${QUESTIONS.length}/${QUESTIONS.length}`
   ) {
-    losingPage();
+    // setTimeout to display winning page
+    setTimeout(function () {
+      losingPage();
+    }, 800);
   }
   setTimeout(function () {
     nextQuestion();
