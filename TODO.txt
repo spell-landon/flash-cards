@@ -6,24 +6,24 @@
 
 4. ✅ Fix the dark theme bugs when switched during active correct/incorrect answer page
 
-5. Fix 'check answer' button, if user goes to the previous question, and then back to the currently answered question, keep the disabled status of 'check answer' button
+5. (Only when arrows are present) Fix 'check answer' button, if user goes to the previous question, and then back to the currently answered question, keep the disabled status of 'check answer' button
 
 6. ✅ Fix check answer background hover effect
 
-7. Add checked option when going to previous button
+7. (Only when arrows are present) Add checked option when going to previous button
 
 8. ✅ fix toggle placement
 
 9. ✅ show hint only once during round
 
-10. Only go to next question if option is selected, disable next arrow and display "You must select an option before proceeding!"
+10. (Only when arrows are present) Only go to next question if option is selected, disable next arrow and display "You must select an option before proceeding!"
 
 11. ✅ Add audio flipping effect
 
 12. ✅ Add auto next question
 
-13. Fix flipping card audio. Only play it during the first click. If clicked again, do not play audio.
+13. ✅ Fix flipping card audio. Only play it during the first click. If clicked again, do not play audio.
 
 14. ✅ Resize the card on mobile to fit more of the screen
 
-15. Look at background height? winning/losing page is not working correctly.
+15. ✅ Look at background height? winning/losing page is not working correctly.

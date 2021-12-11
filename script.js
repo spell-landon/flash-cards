@@ -276,25 +276,32 @@ function previousQuestion() {
 }
 //?---------- Show Hint Function ----------*/
 function showHint() {
-  while (clicked < 1) {
+  if (clicked < 1) {
     // transform the flipCardInner on the X axis
     flipCardInner.style.transform = 'rotateX(180deg)';
     // play audio on flip
     playCardFlip();
+    // add 1 to "clicked" so we can disable
     clicked++;
-  }
-  if (clicked === 1) {
+    // add timer to card flip back
+    setTimeout(hideHint, 800);
+    // play audio on flip back
+    setTimeout(playCardFlip, 800);
+    // if clicked === 1, disable the hint button and add gray background
+  } else if (clicked === 1) {
     hintBtn.style.backgroundColor = 'gray';
     hintBtn.disabled === true;
   }
-  setTimeout(hideHint, 800);
 }
 //?---------- Hide Hint Function ----------*/
 function hideHint() {
   // transform the flipCardInner on the X axis
   flipCardInner.style.transform = 'rotateX(0deg)';
-  // play audio on flip
-  playCardFlip();
+  // if clicked === 1, disable the hint button and add gray background
+  if (clicked === 1) {
+    hintBtn.style.backgroundColor = 'gray';
+    hintBtn.disabled === true;
+  }
 }
 //?---------- Win Message Function ----------*/
 function goodJobMessage() {
