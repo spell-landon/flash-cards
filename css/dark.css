@@ -356,6 +356,9 @@ form {
 input[type='radio'] {
   display: none;
 }
+label {
+  cursor: pointer;
+}
 input[type='radio']:checked + label {
   background: rgba(255, 243, 218);
   padding: 0.8rem 5rem;
