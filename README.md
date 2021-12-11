@@ -2,7 +2,7 @@
 
 ## Project Description
 
-My project is called Flash Card Memory Game. It's a little game to test your memory on a given topic. You will have a card displayed with a question that you must answer via the radio options. Your score will be kept so you can see how many cards you have gotten correct. If you can get every single question correct, a congratulatory message will display at the end. If you cannot get every answer correct, a "Better luck next time"-esque message will display at the end and you will have the option to restart if you so please.
+This browswer-based game is simply called Flash Card Memory Game. It's a little game to test your memory on a given topic. You will have a card displayed with a question that you must answer via the radio options. Your score will be kept so you can see how many cards you have gotten correct. If you can get every single question correct, a congratulatory message will display at the end. If you cannot get every answer correct, a "Better luck next time"-esque message will display at the end and you will have the option to restart if you so please.
 
 Play along and see if you can get all of the questions correct! Good luck!
 
@@ -31,6 +31,8 @@ To install this repository:
 - Once inside, use the code `git clone copied_link`
 - Once the repo has been installed, change into the directory with `cd flash-cards`
 - From here you can run `code .` to open it up in VS Code
+
+The Questions/Answers are populated dynamically, so if any are added or removed, the score count and card count will update accordingly.
 
 ## Planning Process
 
