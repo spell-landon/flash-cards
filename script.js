@@ -185,6 +185,8 @@ function checkAnswer(event) {
     correctAnswer();
     // Add '1' to the score so you can keep track of current score
     score = score + 1;
+    //! Glow
+    scoreCount.classList.add('score-glow');
   } else {
     // if the selected radio button does not equal the answer
     // run the incorrect answer function
@@ -215,6 +217,9 @@ function nextQuestion() {
   checkAnswerBtn.classList.remove(`check-answer-gray`);
   // add back the hover selector
   checkAnswerBtn.classList.add(`check-answer_hover`);
+  // remove score glow
+  scoreCount.classList.remove('score-glow');
+
   // cycle through each question
   if (i < QUESTIONS.length - 1) {
     // reset the page styling

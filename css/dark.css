@@ -61,6 +61,33 @@ header > .hero-title:hover {
 .score-section > .score-board-count {
   font-size: 18px;
 }
+/* HELPER https://fdossena.com/?p=html5cool/buttons/i.frag {Idle Animation section} */
+.score-glow {
+  animation: glow 1s infinite linear;
+}
+@keyframes glow {
+  0% {
+    color: #6cc176;
+    transform: scale(4);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  25% {
+    color: #6fde7c;
+    transform: scale(1.2);
+  }
+  35% {
+    transform: scale(1);
+  }
+  100% {
+    color: white;
+  }
+}
 main {
   display: -webkit-box;
   display: -ms-flexbox;
