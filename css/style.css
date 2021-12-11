@@ -27,6 +27,7 @@ header {
   align-items: center;
   font-size: 14px;
   padding: 0.5rem;
+  color: black;
 }
 header > .hero-title {
   border: none;
@@ -87,6 +88,7 @@ main {
   position: absolute;
   text-align: center;
   max-width: 70%;
+  color: black;
 }
 .game-start-page > h1 {
   font-size: 24px;
@@ -136,6 +138,7 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  color: black;
 }
 .card-and-buttons {
   display: -webkit-box;
@@ -290,6 +293,7 @@ main {
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
   background-color: transparent;
+  color: black;
 }
 .arrowBtn:hover {
   color: rgb(78, 188, 59);
@@ -311,12 +315,23 @@ form {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 650px;
+  width: 550px;
   font-size: 20px;
   text-align: left;
+  justify-content: center;
+  align-items: center;
 }
 #question-1 > div {
   padding: 1rem 0;
+  text-align: center;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio']:checked + label {
+  border: 1px solid rgb(48, 110, 72);
+  padding: 0.8rem 5rem;
+  border-radius: 15px;
 }
 /* FORM ----- END */
 
@@ -480,6 +495,7 @@ form {
   width: 100%;
   background-color: #bce8c1;
   margin-bottom: 8rem;
+  color: black;
 }
 .winning-page > h1 {
   font-size: 36px;
@@ -516,6 +532,7 @@ form {
   width: 100%;
   background-color: #f1bcbc;
   margin-bottom: 8rem;
+  color: black;
 }
 .losing-page > h1 {
   font-size: 36px;
@@ -537,7 +554,7 @@ form {
   background: #bce8c1;
 }
 .incorrect-question {
-  background: #F1BCBC;
+  background: #f1bcbc;
 }
 .check-answer-gray {
   background-color: rgb(185, 185, 185);
@@ -684,7 +701,6 @@ form {
   .answerTwo,
   .answerThree,
   .answerFour {
-    border: 1px solid rgba(52, 48, 110, 0.149);
     border-radius: 15px;
     margin: 0.2rem 0;
     width: 250px;
