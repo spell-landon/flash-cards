@@ -338,7 +338,6 @@ function goodJobMessage() {
   goodJobMsg.innerText = `${winMessage[randomIndex]}`;
   // append p to div
   goodJobDiv.appendChild(goodJobMsg);
-
 }
 //?---------- Lose Message Function ----------*/
 function losingMessage() {
