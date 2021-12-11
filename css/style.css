@@ -237,7 +237,7 @@ main {
   font-weight: 300;
   line-height: 50px;
 }
-/* HINT BUTTON */
+/*? HINT BUTTON */
 .hint-button {
   color: #705b5b;
   font-size: 20px;
@@ -258,8 +258,8 @@ main {
 .flip-card-front > button:hover {
   background-color: #efd593;
 }
-/* HINT BUTTON ----- END */
-/* HIDE-HINT BUTTON */
+/*? HINT BUTTON ----- END */
+/*? HIDE-HINT BUTTON */
 .hide-hint-button {
   color: #705b5b;
   font-size: 20px;
@@ -280,10 +280,10 @@ main {
 .flip-card-back > button:hover {
   background-color: #efd593;
 }
-/* HIDE-HINT BUTTON ----- END */
-/* CARD ----- END */
+/*? HIDE-HINT BUTTON ----- END */
+/*? CARD ----- END */
 
-/* ARROW BUTTONS */
+/*? ARROW BUTTONS */
 .arrowBtn {
   display: none;
   font-size: 24px;
@@ -304,9 +304,9 @@ main {
 i {
   padding: 1rem;
 }
-/* ARROW BUTTONS ----- END */
+/*? ARROW BUTTONS ----- END */
 
-/* FORM */
+/*? FORM */
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,9 +333,9 @@ input[type='radio']:checked + label {
   padding: 0.8rem 5rem;
   border-radius: 15px;
 }
-/* FORM ----- END */
+/*? FORM ----- END */
 
-/* CHECK ANSWER BUTTON */
+/*? CHECK ANSWER BUTTON */
 .check-answer {
   height: 40px;
   width: 200px;
@@ -354,9 +354,9 @@ input[type='radio']:checked + label {
 .check-answer:active {
   background-color: rgb(172, 229, 180);
 }
-/* CHECK ANSWER BUTTON ----- END */
+/*? CHECK ANSWER BUTTON ----- END */
 
-/* RESTART BUTTON */
+/*? RESTART BUTTON */
 .restart {
   border: none;
   height: 35px;
@@ -373,19 +373,19 @@ input[type='radio']:checked + label {
 .restart:active {
   background: #f4a4a4;
 }
-/* RESTART BUTTON ----- END */
+/*? RESTART BUTTON ----- END */
 
-/* BOTTOM HINT */
+/*? BOTTOM HINT */
 .game-board > p {
   font-size: 12px;
 }
 .game-board > p > i {
   color: #705b5b;
 }
-/* BOTTOM HINT ----- END */
+/*? BOTTOM HINT ----- END */
 
 /* HELPER: https://www.w3schools.com/howto/howto_css_switch.asp */
-/* SWITCH CONTAINER */
+/*? SWITCH CONTAINER */
 .switch-container {
   z-index: 10;
   position: absolute;
@@ -405,7 +405,7 @@ input[type='radio']:checked + label {
   -ms-transform: translate(-50%);
   transform: translate(-50%);
 }
-/* SWITCH CONTAINER ----- END */
+/*? SWITCH CONTAINER ----- END */
 
 /* The switch - the box around the slider */
 .switch {
@@ -464,8 +464,7 @@ input[type='radio']:checked + label {
 .slider.round:before {
   border-radius: 50%;
 }
-
-/* MESSAGE IN FORM */
+/*? MESSAGE IN FORM */
 #good-job,
 #bad-job {
   font-size: 20px;
@@ -473,9 +472,9 @@ input[type='radio']:checked + label {
   margin-bottom: -5.3rem;
   text-align: center;
 }
-/* MESSAGE IN FORM ----- END */
+/*? MESSAGE IN FORM ----- END */
 
-/* WINNING PAGE */
+/*? WINNING PAGE */
 .winning-page {
   position: absolute;
   height: 100vh;
@@ -510,9 +509,9 @@ input[type='radio']:checked + label {
   font-size: 18px;
   padding: 0.5rem;
 }
-/* WINNING PAGE ----- END */
+/*? WINNING PAGE ----- END */
 
-/* LOSING PAGE */
+/*? LOSING PAGE */
 .losing-page {
   position: absolute;
   height: 100vh;
@@ -547,9 +546,9 @@ input[type='radio']:checked + label {
   font-size: 18px;
   padding: 0.5rem;
 }
-/* LOSING PAGE ----- END */
+/*? LOSING PAGE ----- END */
 
-/* BACKGROUND COLORS */
+/*? BACKGROUND COLORS */
 .correct-question {
   background: #bce8c1;
 }
@@ -559,13 +558,11 @@ input[type='radio']:checked + label {
 .check-answer-gray {
   background-color: rgb(185, 185, 185);
 }
-
-/* BACKGROUND COLORS ----- END */
+/*? BACKGROUND COLORS ----- END */
 
 @media (max-width: 800px) {
   html,
   body {
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     padding: 0px;
@@ -574,7 +571,6 @@ input[type='radio']:checked + label {
     overflow-y: hidden;
   }
   header {
-    /* border: 1px solid red; */
     padding: 0.5rem;
   }
   header > .hero-title {
@@ -586,11 +582,9 @@ input[type='radio']:checked + label {
   }
   .game-start-page > h1 {
     padding: 1rem;
-    /* border: 1px solid red; */
     margin-bottom: 1rem;
   }
   .game-start-page > p {
-    /* border: 1px solid red; */
     padding: 0 1.5rem;
   }
   #hero-img {
@@ -601,6 +595,9 @@ input[type='radio']:checked + label {
     margin-top: 5rem;
     font-weight: 300;
     border-radius: 25px;
+  }
+  .switch-container {
+    top: 20px;
   }
   .switch {
     height: 20px;
@@ -696,6 +693,9 @@ input[type='radio']:checked + label {
   }
   form > div > .radio {
     display: none;
+  }
+  input[type='radio']:checked + label {
+    padding: 0.8rem 1.5rem;
   }
   .answerOne,
   .answerTwo,
