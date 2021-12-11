@@ -72,3 +72,18 @@ const questionOptions = {
     `25,000`,
   ],
 };
+const winMessage = [
+  `Good Job!`,
+  `Way to go!`,
+  `Woohoo!`,
+  `You've got this!`,
+  `You're on fire!`,
+  `Keep it up!`,
+];
+const loseMessage = [
+  `Better luck next time!`,
+  `Aw man!`,
+  `Shucks!`,
+  `You'll get'em next time!`,
+  `Try Again!`,
+];

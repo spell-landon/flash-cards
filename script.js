@@ -333,9 +333,12 @@ function goodJobMessage() {
   // create p
   let goodJobMsg = document.createElement('p');
   // set the inner text of p
-  goodJobMsg.innerText = `Good job!`;
+  // get random string from winMessage
+  let randomIndex = Math.floor(Math.random() * winMessage.length);
+  goodJobMsg.innerText = `${winMessage[randomIndex]}`;
   // append p to div
   goodJobDiv.appendChild(goodJobMsg);
+
 }
 //?---------- Lose Message Function ----------*/
 function losingMessage() {
@@ -349,7 +352,9 @@ function losingMessage() {
   // create p
   let losingMessage = document.createElement('p');
   // set the inner text of p
-  losingMessage.innerText = `Better luck next time!`;
+  // get random string from loseMessage
+  let randomIndex = Math.floor(Math.random() * loseMessage.length);
+  losingMessage.innerText = `${loseMessage[randomIndex]}`;
   // append p to div
   losingDiv.appendChild(losingMessage);
 }
