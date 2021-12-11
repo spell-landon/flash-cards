@@ -14,8 +14,10 @@
 
 8. ✅ fix toggle placement
 
-9. ❌ show hint only once during round
+9. ✅ show hint only once during round
 
-10. ❌ Only go to next question if option is selected
+10. ❌ Only go to next question if option is selected, disable next arrow and display "You must select an option before proceeding!"
 
 11. ✅ Add audio flipping effect
+
+12. ✅ Add auto next question

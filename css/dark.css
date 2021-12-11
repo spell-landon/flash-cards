@@ -6,7 +6,6 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  padding: 1rem;
   height: 100vh;
   max-width: 1500px;
   margin: 0 auto;
@@ -25,6 +24,7 @@ body {
 }
 /*? HEADER SECTION */
 header {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +35,7 @@ header {
   -ms-flex-align: center;
   align-items: center;
   font-size: 14px;
-  padding-bottom: 1rem;
+  padding: 0.5rem;
   color: white;
 }
 header > .hero-title {
@@ -45,6 +45,8 @@ header > .hero-title {
   color: white;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 header > .hero-title:hover {
@@ -224,7 +226,7 @@ main {
   color: black;
   width: 400px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 50px;
 }
 #card-text-answer {
@@ -232,7 +234,7 @@ main {
   color: black;
   width: 400px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 50px;
 }
 /* HINT BUTTON */
@@ -283,6 +285,7 @@ main {
 
 /* ARROW BUTTONS */
 .arrowBtn {
+  display: none;
   font-size: 24px;
   height: 1rem;
   border: none;
@@ -384,7 +387,10 @@ form {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  top: 12px;
   left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
   transform: translate(-50%);
 }
 /* SWITCH CONTAINER ----- END */
@@ -548,9 +554,25 @@ form {
 
 /* BACKGROUND COLORS */
 .correct-question {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#6da587),
+    to(#164927)
+  );
+  background: -o-linear-gradient(top, #6da587 0%, #164927 100%);
   background: linear-gradient(180deg, #6da587 0%, #164927 100%);
 }
 .incorrect-question {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#d08888),
+    to(#491616)
+  );
+  background: -o-linear-gradient(top, #d08888 0%, #491616 100%);
   background: linear-gradient(180deg, #d08888 0%, #491616 100%);
 }
 /* BACKGROUND COLORS ----- END */

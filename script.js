@@ -4,7 +4,6 @@
 let i = 0;
 let score = Number();
 let theme = document.getElementById('theme');
-//!
 let clicked = 0;
 
 //*---------------------------------------*/
@@ -107,6 +106,10 @@ function darkTheme() {
 }
 //?---------- Start the game function ----------*/
 function startGame() {
+  // reset clicked to 0
+  clicked = 0;
+  // reset the hintBtn background color
+  hintBtn.style.backgroundColor = `#f2deab`;
   // enable the check answer button
   checkAnswerBtn.disabled = false;
   // Hide the Start Page Section
@@ -197,6 +200,9 @@ function checkAnswer(event) {
   ) {
     losingPage();
   }
+  setTimeout(function () {
+    nextQuestion();
+  }, 800);
 }
 //?---------- Next Question Function ----------*/
 function nextQuestion() {
@@ -204,6 +210,11 @@ function nextQuestion() {
   clicked = 0;
   // reset the hintBtn background color
   hintBtn.style.backgroundColor = `#f2deab`;
+  hintBtn.disabled === false;
+  // reset check answer button
+  checkAnswerBtn.classList.remove(`check-answer-gray`);
+  // add back the hover selector
+  checkAnswerBtn.classList.add(`check-answer_hover`);
   // cycle through each question
   if (i < QUESTIONS.length - 1) {
     // reset the page styling
@@ -274,6 +285,7 @@ function showHint() {
   }
   if (clicked === 1) {
     hintBtn.style.backgroundColor = 'gray';
+    hintBtn.disabled === true;
   }
   setTimeout(hideHint, 800);
 }
@@ -318,12 +330,14 @@ function losingMessage() {
 }
 //?---------- Default Style Function ----------*/
 function defaultStyle() {
+  // check answer button color
+  checkAnswerBtn.classList.add(`check-answer`);
+  // add back the hover selector
+  checkAnswerBtn.classList.add(`check-answer_hover`);
   // remove radio button selection
   for (let i = 0; i < radioButtons.length; i++) {
     radioButtons[i].checked = false;
   }
-  // check answer button color
-  checkAnswerBtn.style.backgroundColor = '#bce8c1';
   // enable the check answer button
   checkAnswerBtn.disabled = false;
   // remove previous win/lose message
@@ -343,7 +357,9 @@ function defaultStyle() {
 //?---------- Correct Answer Function ----------*/
 function correctAnswer() {
   // change check answer button background to gray
-  checkAnswerBtn.style.backgroundColor = 'gray';
+  checkAnswerBtn.classList.add(`check-answer-gray`);
+  // remove the hover selector
+  checkAnswerBtn.classList.remove(`check-answer_hover`);
   // disable the checkAnswer button after click
   // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
   checkAnswerBtn.disabled = true;
@@ -354,7 +370,9 @@ function correctAnswer() {
 //?---------- Incorrect Answer Function ----------*/
 function incorrectAnswer() {
   // change check answer button background to gray
-  checkAnswerBtn.style.backgroundColor = 'gray';
+  checkAnswerBtn.classList.add(`check-answer-gray`);
+  // remove the hover selector
+  checkAnswerBtn.classList.remove(`check-answer_hover`);
   // disable the checkAnswer button after click
   // HELPER: https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
   checkAnswerBtn.disabled = true;
