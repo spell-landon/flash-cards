@@ -382,6 +382,29 @@ input[type='radio']:checked + label {
 .check-answer:active {
   background-color: rgb(172, 229, 180);
 }
+.check-shake {
+  animation: shake 1s infinite linear;
+}
+@keyframes shake {
+  0% {
+    margin-left: 15px;
+  }
+  5% {
+    margin-left: -15px;
+  }
+  10% {
+    margin-left: 15px;
+  }
+  15% {
+    margin-left: -15px;
+  }
+  20% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
 /*? CHECK ANSWER BUTTON ----- END */
 
 /*? RESTART BUTTON */

@@ -185,12 +185,14 @@ function checkAnswer(event) {
     correctAnswer();
     // Add '1' to the score so you can keep track of current score
     score = score + 1;
-    //! Glow
+    // add score-glow class for scoreCount animation
     scoreCount.classList.add('score-glow');
   } else {
     // if the selected radio button does not equal the answer
     // run the incorrect answer function
     incorrectAnswer();
+    // add checkAnswerBtn shake (incorrect)
+    checkAnswerBtn.classList.add('check-shake');
   }
   // check to see if the score is "10/10" and if we have reached the last question
   if (scoreCount.innerText === `10/10`) {
@@ -219,6 +221,8 @@ function nextQuestion() {
   checkAnswerBtn.classList.add(`check-answer_hover`);
   // remove score glow
   scoreCount.classList.remove('score-glow');
+  // remove checkAnswerBtn shake (incorrect)
+  checkAnswerBtn.classList.remove('check-shake');
 
   // cycle through each question
   if (i < QUESTIONS.length - 1) {
