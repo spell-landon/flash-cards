@@ -118,9 +118,12 @@ The Questions/Answers are populated dynamically, so if any are added or removed,
 
 ```js
 if (scoreCount.innerText === `10/10`) {
-    winningPage();
-} else if (scoreCount.innerText !== `10/10` && cardCounter.innerText === `10/10`) {
-    losingPage();
+  winningPage();
+} else if (
+  scoreCount.innerText !== `10/10` &&
+  cardCounter.innerText === `10/10`
+) {
+  losingPage();
 }
 ```
 
@@ -132,7 +135,7 @@ if (scoreCount.innerText === `10/10`) {
 
 ```css
 .correct-question {
-    background: #bce8c1;
+  background: #bce8c1;
 }
 ```
 

@@ -31,20 +31,18 @@
   <body>
     <header id="header">
       <button class="hero-title">Flash Card Memory Game</button>
-          <!-- Referenced: https://www.w3schools.com/howto/howto_css_switch.asp -->
-    <div class="switch-container">
-      <label class="switch">
-        <input type="checkbox" name="toggle-switch" id="toggle" />
-        <span class="slider round"></span>
-      </label>
-    </div>
+      <!-- Referenced: https://www.w3schools.com/howto/howto_css_switch.asp -->
+      <div class="switch-container">
+        <label class="switch">
+          <input type="checkbox" name="toggle-switch" id="toggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
       <div class="score-section hidden">
         <p class="score-board-title">Score</p>
         <p class="score-board-count">0/10</p>
       </div>
     </header>
-
-
 
     <main>
       <section class="game-start-page">
@@ -143,7 +141,9 @@
             <label for="answer4" id="answer-4-label"></label>
           </div>
           <!-- CHECK ANSWER BUTTON -->
-          <button type="submit" class="check-answer check-answer_hover">Check Your Answer</button>
+          <button type="submit" class="check-answer check-answer_hover">
+            Check Your Answer
+          </button>
         </form>
         <!-- RESTART BUTTON -->
         <button class="restart">Restart</button>
