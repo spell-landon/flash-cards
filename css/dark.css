@@ -359,9 +359,21 @@ input[type='radio'] {
 label {
   cursor: pointer;
 }
+input[type='radio']:hover + label {
+  background: rgba(255, 243, 218);
+  padding: 0.5rem 5rem;
+  border-radius: 15px;
+  color: black;
+}
+input[type='radio']:active + label {
+  background: rgb(255, 231, 179);
+  padding: 0.5rem 5rem;
+  border-radius: 15px;
+  color: black;
+}
 input[type='radio']:checked + label {
   background: rgba(255, 243, 218);
-  padding: 0.8rem 5rem;
+  padding: 0.5rem 5rem;
   border-radius: 15px;
   color: black;
 }
