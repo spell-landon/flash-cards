@@ -194,6 +194,7 @@ main {
   width: 550px;
   height: 350px;
   margin: 1.5rem 1rem;
+  perspective: 1000px;
 }
 .flip-card-inner {
   position: relative;
