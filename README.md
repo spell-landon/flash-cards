@@ -25,10 +25,10 @@ Play along and see if you can get all of the questions correct! Good luck!
 To install this repository:
 
 - If you would like to fork the repository so you have your own copy, feel free to!
-- Click on the green "Code" button.
+- Click on the green "Code" button.  <img src="./assets/wireframe-imgs/code_button.png" alt="Code button" width="30px">
 - Copy either the HTTPS or SSH link that is provided
-- Open up the Terminal and navigate to the desired file location
-- Once inside, use the code `git clone ` copied_link_here
+- Open up the Terminal and navigate to the desired directory location
+- Once inside, use the code "`git clone` copied_link_here"
 - Once the repo has been installed, change into the directory with `cd flash-cards`
 - From here you can run `code .` to open it up in VS Code
 
@@ -60,21 +60,13 @@ The Questions/Answers are populated dynamically, so if any are added or removed,
 
 <img src="./assets/wireframe-imgs/gameplay_default_light.png" alt="Gameplay inerface example" width="600px">
 
-> Gameplay - Correct Answer
+> Gameplay - Correct/Incorrect Answer
 
-<img src="./assets/wireframe-imgs/gameplay_correct_light.png" alt="Gameplay - Correct Answer" width="600px">
+<img src="./assets/wireframe-imgs/gameplay_correct_light.png" alt="Gameplay - Correct Answer" width="600px"> <img src="./assets/wireframe-imgs/gameplay_incorrect_light.png" alt="Gameplay - Incorrect Answer" width="600px">
 
-> Gameplay - Incorrect Answer
+> Game End - Win/Lose
 
-<img src="./assets/wireframe-imgs/gameplay_incorrect_light.png" alt="Gameplay - Incorrect Answer" width="600px">
-
-> Game End - Win
-
-<img src="./assets/wireframe-imgs/game_end_win_light.png" alt="Game End - Win" width="600px">
-
-> Game End - Lose
-
-<img src="./assets/wireframe-imgs/game_end_lose_light.png" alt="Game End - Lose" width="600px">
+<img src="./assets/wireframe-imgs/game_end_win_light.png" alt="Game End - Win" width="600px"> <img src="./assets/wireframe-imgs/game_end_lose_light.png" alt="Game End - Lose" width="600px">
 
 #### Bronze
 
@@ -103,13 +95,9 @@ The Questions/Answers are populated dynamically, so if any are added or removed,
 
 <img src="./assets/wireframe-imgs/gameplay_default_dark.png" alt="Example of a Dark Theme during regular game play" width="600px">
 
-> Example of a Dark Theme when you win the game
+> Examples of a Dark Theme when you win/lose the game
 
-<img src="./assets/wireframe-imgs/game_end_win_dark.png" alt="Example of a Dark Theme when you win the game" width="600px">
-
-> Example of a Dark Theme when you lose the game
-
-<img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="600px">
+<img src="./assets/wireframe-imgs/game_end_win_dark.png" alt="Example of a Dark Theme when you win the game" width="600px"> <img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="600px">
 
 ## Major Hurdles / Unsolved Problems
 
