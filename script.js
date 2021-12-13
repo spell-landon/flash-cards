@@ -242,9 +242,7 @@ function nextQuestion() {
     // set question card text
     cardTextQuestionEl.innerText = QUESTIONS[i];
     // set answer card text
-    setTimeout(function () {
-      cardTextAnswerEl.innerText = ANSWERS[i];
-    }, 1000);
+    cardTextAnswerEl.innerText = ANSWERS[i];
     // add 1 to the card counter
     cardCounter.innerText = `${i + 1}/${QUESTIONS.length}`;
     // hide the hint and flip back to question

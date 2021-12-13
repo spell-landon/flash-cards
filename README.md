@@ -25,7 +25,7 @@ Play along and see if you can get all of the questions correct! Good luck!
 To install this repository:
 
 - If you would like to fork the repository so you have your own copy, feel free to!
-- Click on the green "Code" button.  <img src="./assets/wireframe-imgs/code_button.png" alt="Code button" width="30px">
+- Click on the green "Code" button. <img src="./assets/wireframe-imgs/code_button.png" alt="Code button" width="30px">
 - Copy either the HTTPS or SSH link that is provided
 - Open up the Terminal and navigate to the desired directory location
 - Once inside, use the code "`git clone` copied_link_here"
