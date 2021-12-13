@@ -28,7 +28,7 @@ To install this repository:
 - Click on the green "Code" button.
 - Copy either the HTTPS or SSH link that is provided
 - Open up the Terminal and navigate to the desired file location
-- Once inside, use the code `git clone copied_link`
+- Once inside, use the code `git clone ` copied_link_here
 - Once the repo has been installed, change into the directory with `cd flash-cards`
 - From here you can run `code .` to open it up in VS Code
 
@@ -80,20 +80,19 @@ The Questions/Answers are populated dynamically, so if any are added or removed,
 
 - As a player, I want to see which card I am currently on, and the total amount of cards to go through.
 - As a player, I want to be see animations when I flip the card over for the answer.
-- As a player, I want to the background color and the text color to change, indicating if I got the answer correct.
+- As a player, I want the background color to change, indicating if I got the answer correct.
 
-> Example of a card with cycle buttons on the left and right side, and a counter above the card indicating the card number witin the "stack".
+> Example of a card with a counter above the card indicating the card number witin the "stack".
 
 <img src="./assets/wireframe-imgs/card_element.png" alt="Card element" width="600px">
 
 #### Silver
 
-- As a player, I want to be able to cycle through each card without answering.
 - As a player, I want to be able to preview the answer before selecting my answer.
 
 #### Gold
 
-- As a player, I want to have a dark theme, so I can play at night and have the light be less harsh on my eyes.
+- As a player, I want to have a dark theme, so I can customize the gaming experience.
 - As a player, I would like the dark theme to have a toggle so I can switch back and forth at my leisure.
 
 > Example of a Dark Theme toggle switch
