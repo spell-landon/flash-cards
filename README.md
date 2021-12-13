@@ -62,11 +62,11 @@ The Questions/Answers are populated dynamically, so if any are added or removed,
 
 > Gameplay - Correct/Incorrect Answer
 
-<img src="./assets/wireframe-imgs/gameplay_correct_light.png" alt="Gameplay - Correct Answer" width="600px"> <img src="./assets/wireframe-imgs/gameplay_incorrect_light.png" alt="Gameplay - Incorrect Answer" width="600px">
+<img src="./assets/wireframe-imgs/gameplay_correct_light.png" alt="Gameplay - Correct Answer" width="400px"> <img src="./assets/wireframe-imgs/gameplay_incorrect_light.png" alt="Gameplay - Incorrect Answer" width="400px">
 
 > Game End - Win/Lose
 
-<img src="./assets/wireframe-imgs/game_end_win_light.png" alt="Game End - Win" width="600px"> <img src="./assets/wireframe-imgs/game_end_lose_light.png" alt="Game End - Lose" width="600px">
+<img src="./assets/wireframe-imgs/game_end_win_light.png" alt="Game End - Win" width="400px"> <img src="./assets/wireframe-imgs/game_end_lose_light.png" alt="Game End - Lose" width="400px">
 
 #### Bronze
 
@@ -97,7 +97,7 @@ The Questions/Answers are populated dynamically, so if any are added or removed,
 
 > Examples of a Dark Theme when you win/lose the game
 
-<img src="./assets/wireframe-imgs/game_end_win_dark.png" alt="Example of a Dark Theme when you win the game" width="600px"> <img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="600px">
+<img src="./assets/wireframe-imgs/game_end_win_dark.png" alt="Example of a Dark Theme when you win the game" width="400px"> <img src="./assets/wireframe-imgs/game_end_lose_dark.png" alt="Example of a Dark Theme when you lose the game" width="400px">
 
 ## Major Hurdles / Unsolved Problems
 
